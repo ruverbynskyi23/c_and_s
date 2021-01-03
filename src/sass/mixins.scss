@@ -1,0 +1,26 @@
+@import './constants.scss';
+
+@mixin container($maxWidth: $xl) {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $maxWidth;
+}
+
+@mixin section-title($size: 52px, $lheight: 68px) {
+  font-size: $size;
+  font-weight: normal;
+  line-height: $lheight;
+  color: $black;
+}
+
+@mixin section-text($size: 20px, $lheight: 30px) {
+  font-size: $size;
+  line-height: $lheight;
+  color: $dark-grey;
+}
+
+@mixin btn-text($color, $size: 20px, $lheight: 30px) {
+  font-size: $size;
+  line-height: $lheight;
+  color: $color;
+}
