@@ -1,0 +1,38 @@
+@import '../../sass/constants.scss';
+@import '../../sass/mixins.scss';
+
+.container {
+  @include container;
+  position: relative;
+}
+
+.introduction {
+  padding-top: 312px;
+  background-image: url('../../assets//main-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .title {
+    @include section-title(64px, 90px);
+    max-width: 770px;
+    margin-bottom: 115px;
+  }
+
+  .actionBlock {
+    padding-left: 41px;
+  }
+
+  .sidebar {
+    position: absolute;
+    right: 0;
+    bottom: 333px;
+
+    .link {
+      margin-bottom: 40px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
