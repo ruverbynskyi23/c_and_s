@@ -3,8 +3,12 @@
 
 .header {
   padding: 48px 0;
-  font-family: $Sarabun;
+  width: 100%;
   background-color: transparent;
+  font-family: $Sarabun;
+  position: absolute;
+  top: 0;
+  left: 0;
 
   .container {
     @include container;
