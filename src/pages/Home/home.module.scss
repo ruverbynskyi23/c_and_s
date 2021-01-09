@@ -2,9 +2,7 @@
 @import '../../sass/mixins.scss';
 
 .container {
-  border: solid 1px red;
   @include container;
-
   position: relative;
 }
 
@@ -23,7 +21,6 @@
 
   .actionBlock {
     padding-left: 41px;
-    margin-bottom: 288px;
   }
 
   .sidebar {

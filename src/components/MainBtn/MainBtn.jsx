@@ -8,9 +8,15 @@ class MainBtn extends React.Component {
   }
 
   render() {
-    const { text } = this.props;
+    const { id, text, path, status, hover } = this.props;
+    
     return(
-      <Link className={styles.btn} to="/">
+      <Link
+        id={id}
+        className={`${styles.btn} ${status === id ? styles.active : ''}`}
+        path={path}
+        onMouseOver={hover}
+      >
         {text}
       </Link>
     )

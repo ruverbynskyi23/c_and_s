@@ -11,7 +11,7 @@
   z-index: 1;
 
   &:last-child {
-    margin-left: 64px;
+    margin: 0 0 288px 64px;
   }
 
   &::before {
@@ -26,5 +26,16 @@
     left: -41px;
     z-index: -1;
 
+    transform-origin: 45 45;
+    transform: scale(0);
+
+    transition: transform .7s ease;
+  }
+
+  &.active {
+    color: $black;
+    &::before {
+      transform: scale(1);
+    }
   }
 }
