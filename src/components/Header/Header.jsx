@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './header.module.scss';
 import { generalPics } from '../../assets/index';
 
@@ -7,9 +8,9 @@ class Header extends React.Component {
     return (
       <header className={styles.header}>
         <div className={styles.container}>
-          <div className={styles.logo}>
+          <Link className={styles.logo} to="/">
             <img src={generalPics.logo} alt="логотип"/>
-          </div>
+          </Link>
 
           <ul>
             <li className={styles.listItem}>
