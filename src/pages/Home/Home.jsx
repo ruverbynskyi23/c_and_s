@@ -1,7 +1,7 @@
 import React from 'react';
 import { MainBtn } from '../../components/index';
 import styles from './home.module.scss';
-import { social } from '../../assets/index';
+import { social, advantages } from '../../assets/index';
 
 class Home extends React.Component {
   constructor() {
@@ -61,6 +61,39 @@ class Home extends React.Component {
                 </li>
               </ul>
             </nav>
+
+          </div>
+        </section>
+
+        <section className={styles.advantages}>
+          <div className={styles.container}>
+            <h2 className={styles.sectionTitle}>Наши преимущества</h2>
+
+            <div className={styles.wrapper}>
+              <figure className={styles.advantageItem}>
+                <img src={advantages.handmade} alt="ручная работа"/>
+                <figcaption className={styles.caption}>HANDMADE</figcaption>
+                <p className={styles.description}>Полностью ручная работа</p>
+              </figure>
+
+              <figure className={styles.advantageItem}>
+                <img src={advantages.quality} alt="качество"/>
+                <figcaption className={styles.caption}>КАЧЕСТВО</figcaption>
+                <p className={styles.description}>Уделяем внимание деталям</p>
+              </figure>
+
+              <figure className={styles.advantageItem}>
+                <img src={advantages.sharpening} alt="заточка"/>
+                <figcaption className={styles.caption}>ЗАТОЧКА</figcaption>
+                <p className={styles.description}>Мастер точит вручную</p>
+              </figure>
+
+              <figure className={styles.advantageItem}>
+                <img src={advantages.uniqueness} alt="уникальность"/>
+                <figcaption className={styles.caption}>УНИКАЛЬНОСТЬ</figcaption>
+                <p className={styles.description}>Можем нанести гравировку</p>
+              </figure>
+            </div>
 
           </div>
         </section>
