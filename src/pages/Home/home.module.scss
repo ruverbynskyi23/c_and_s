@@ -36,3 +36,36 @@
     }
   }
 }
+
+.advantages {
+  padding: 140px 0;
+  
+  .sectionTitle {
+    visibility: hidden;
+    height: 0;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .advantageItem {
+    margin-right: 142px;
+    text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    .caption {
+      margin: 24px 0 8px;
+      @include section-text(24px, 36px);
+      letter-spacing: 0.025em;
+    }
+    .description {
+      @include section-text(18px, 27px);
+      letter-spacing: 0.015em;
+      color: $grey;
+    }
+  }
+}
