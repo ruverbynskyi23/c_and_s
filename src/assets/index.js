@@ -1,18 +1,18 @@
 const generalPics = {
-  'logo': require('./logo.svg') 
+  'logo': require('./logo.svg').default
 };
 
 const social = {
-  'inst': require('./social/instagram.svg'),
-  'viber': require('./social/viber.svg'),
-  'tlgm': require('./social/telegram.svg'),
+  'inst': require('./social/instagram.svg').default,
+  'viber': require('./social/viber.svg').default,
+  'tlgm': require('./social/telegram.svg').default,
 };
 
 const advantages = {
-  'handmade': require('./advantages/handmade.svg'),
-  'quality': require('./advantages/quality.svg'),
-  'sharpening': require('./advantages/sharpening.svg'),
-  'uniqueness': require('./advantages/uniqueness.svg'),
+  'handmade': require('./advantages/handmade.svg').default,
+  'quality': require('./advantages/quality.svg').default,
+  'sharpening': require('./advantages/sharpening.svg').default,
+  'uniqueness': require('./advantages/uniqueness.svg').default,
 }
 
 export {
