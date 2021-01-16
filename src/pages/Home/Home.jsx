@@ -1,5 +1,5 @@
 import React from 'react';
-import { MainBtn, SecondaryBtn } from '../../components/index';
+import { MainBtn, SecondaryBtn, RoundBtn} from '../../components/index';
 import styles from './home.module.scss';
 import { social, advantages, generalPics } from '../../assets/index';
 
@@ -124,9 +124,13 @@ class Home extends React.Component {
               <SecondaryBtn text="Весь ассортимент" path="/order"/>
             </div>
 
+            <RoundBtn text="01." />
+
             <figure className={styles.sectionImg}>
               <img src={generalPics.scissors2} alt="ножницы"/>
             </figure>
+
+            <RoundBtn text="02." />
 
           </div>
         </section>

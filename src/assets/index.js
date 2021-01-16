@@ -18,7 +18,8 @@ const advantages = {
 }
 
 const btnSymbols = {
-  'secondaryBtn': require('./btn.svg').default
+  'secondaryBtn': require('./btn.svg').default,
+  'arrow': require('./arrow.svg').default
 }
 
 export {
