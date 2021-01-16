@@ -114,6 +114,22 @@ class Home extends React.Component {
 
           </div>
         </section>
+
+        <section className={styles.feature}>
+          <div className={styles.container}>
+            <div className={styles.textWrapper}>
+              <h2 className={styles.sectionTitle}>Особенности инструмента</h2>
+              <p className={styles.sectionText}>Некоторые продавцы ножниц громко заявляют о том, что их ножницы, мол, точат себя сами. Якобы одно лезвие сделано из более твердого сплава - и при работе оно подтачивает второе лезвие, сделанное из более мягкого. Эта логическая</p>
+
+              <SecondaryBtn text="Весь ассортимент" path="/order"/>
+            </div>
+
+            <figure className={styles.sectionImg}>
+              <img src={generalPics.scissors2} alt="ножницы"/>
+            </figure>
+
+          </div>
+        </section>
       </>
     )
   }

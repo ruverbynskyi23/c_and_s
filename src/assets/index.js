@@ -1,6 +1,7 @@
 const generalPics = {
   'logo': require('./logo.svg').default,
-  'scissors': require('./scissors.jpg').default
+  'scissors': require('./scissors.jpg').default,
+  'scissors2': require('./scissors2.jpg').default
 };
 
 const social = {
