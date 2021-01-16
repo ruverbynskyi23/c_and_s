@@ -90,7 +90,6 @@
 
   .textWrapper {
     max-width: 515px;
-    margin-bottom: 64px;
 
     .sectionTitle {
       @include section-title;
@@ -100,6 +99,7 @@
     .sectionText {
       @include section-text;
       letter-spacing: 0.015;
+      margin-bottom: 64px;
     }  
   }
 }

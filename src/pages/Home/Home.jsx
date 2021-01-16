@@ -1,5 +1,5 @@
 import React from 'react';
-import { MainBtn } from '../../components/index';
+import { MainBtn, SecondaryBtn } from '../../components/index';
 import styles from './home.module.scss';
 import { social, advantages, generalPics } from '../../assets/index';
 
@@ -108,6 +108,8 @@ class Home extends React.Component {
             <div className={styles.textWrapper}>
               <h2 className={styles.sectionTitle}>История<br/>нашего бренда</h2>
               <p className={styles.sectionText}>Мы долго взращивали идею создания украинского бренда парикмахерских ножниц. Без преувеличения работали днем и ночью, мечтая создать инструмент высокого качества, который понравится мастерам.</p>
+
+              <SecondaryBtn text="Подробнее" path="/history"/>
             </div>
 
           </div>

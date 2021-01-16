@@ -16,8 +16,13 @@ const advantages = {
   'uniqueness': require('./advantages/uniqueness.svg').default,
 }
 
+const btnSymbols = {
+  'secondaryBtn': require('./btn.svg').default
+}
+
 export {
   generalPics,
   social,
-  advantages
+  advantages,
+  btnSymbols
 }
