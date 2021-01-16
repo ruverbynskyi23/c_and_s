@@ -69,3 +69,37 @@
     }
   }
 }
+
+.history {
+  padding: 140px 0;
+  background-color: $pale-blue;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sectionImg {
+    margin-right: 139px;
+
+    .scissorsImg {
+      box-shadow: 0px 72px 40px -42px $shadow;
+    }
+  }
+
+  .textWrapper {
+    max-width: 515px;
+
+    .sectionTitle {
+      @include section-title;
+      margin-bottom: 34px;
+    }
+
+    .sectionText {
+      @include section-text;
+      letter-spacing: 0.015;
+      margin-bottom: 64px;
+    }  
+  }
+}

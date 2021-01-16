@@ -1,5 +1,6 @@
 const generalPics = {
-  'logo': require('./logo.svg').default
+  'logo': require('./logo.svg').default,
+  'scissors': require('./scissors.jpg').default
 };
 
 const social = {
@@ -15,8 +16,13 @@ const advantages = {
   'uniqueness': require('./advantages/uniqueness.svg').default,
 }
 
+const btnSymbols = {
+  'secondaryBtn': require('./btn.svg').default
+}
+
 export {
   generalPics,
   social,
-  advantages
+  advantages,
+  btnSymbols
 }
