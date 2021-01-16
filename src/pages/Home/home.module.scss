@@ -103,3 +103,30 @@
     }  
   }
 }
+
+.feature {
+  padding: 140px 0;
+
+  .container {
+    padding: 0 139px;
+  }
+
+  .textWrapper {
+    max-width: 785px;
+    margin-bottom: 100px;
+
+    .sectionTitle {
+      @include section-title;
+      margin-bottom: 34px;
+    }
+    
+    .sectionText {
+      @include section-text;
+      margin-bottom: 64px;
+    }  
+  }
+
+  .sectionImg {
+    margin: 38px 0;
+  }
+}

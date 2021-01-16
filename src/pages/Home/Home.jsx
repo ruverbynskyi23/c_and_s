@@ -1,5 +1,5 @@
 import React from 'react';
-import { MainBtn, SecondaryBtn } from '../../components/index';
+import { MainBtn, SecondaryBtn, RoundBtn} from '../../components/index';
 import styles from './home.module.scss';
 import { social, advantages, generalPics } from '../../assets/index';
 
@@ -111,6 +111,26 @@ class Home extends React.Component {
 
               <SecondaryBtn text="Подробнее" path="/history"/>
             </div>
+
+          </div>
+        </section>
+
+        <section className={styles.feature}>
+          <div className={styles.container}>
+            <div className={styles.textWrapper}>
+              <h2 className={styles.sectionTitle}>Особенности инструмента</h2>
+              <p className={styles.sectionText}>Некоторые продавцы ножниц громко заявляют о том, что их ножницы, мол, точат себя сами. Якобы одно лезвие сделано из более твердого сплава - и при работе оно подтачивает второе лезвие, сделанное из более мягкого. Эта логическая</p>
+
+              <SecondaryBtn text="Весь ассортимент" path="/order"/>
+            </div>
+
+            <RoundBtn text="01." />
+
+            <figure className={styles.sectionImg}>
+              <img src={generalPics.scissors2} alt="ножницы"/>
+            </figure>
+
+            <RoundBtn text="02." />
 
           </div>
         </section>
