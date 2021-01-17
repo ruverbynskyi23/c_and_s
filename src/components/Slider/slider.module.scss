@@ -1,0 +1,28 @@
+.sliderPrev,
+.sliderNext {
+  width: 62px;
+  height: 62px;
+  border: none;
+  background: #131B12;
+  opacity: 0.3;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.sliderPrev {
+  background-image: url('../../assets/btn/arrow_left.svg');
+  left: -31px;
+
+}
+.sliderNext {
+  background-image: url('../../assets/btn/arrow_right.svg');
+  right: -31px;
+}
+.active {
+  opacity: 0.5;
+  transition: opacity .6s ease;
+}

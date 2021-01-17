@@ -1,5 +1,5 @@
 import React from 'react';
-import { MainBtn, SecondaryBtn, RoundBtn} from '../../components/index';
+import { MainBtn, SecondaryBtn, RoundBtn, Slider } from '../../components/index';
 import styles from './home.module.scss';
 import { social, advantages, generalPics } from '../../assets/index';
 
@@ -131,6 +131,25 @@ class Home extends React.Component {
             </figure>
 
             <RoundBtn text="02." />
+
+          </div>
+        </section>
+
+        <section className={styles.inspiration}>
+          <div className={styles.container}>
+            <h2 className={styles.sectionTitle}>Фото для вдохновения</h2>
+
+            <div className={styles.sliderWrapper}>
+              <Slider />
+
+              <div className={styles.spacer}>
+                <span className={styles.spacerText}>scissors handmade</span>
+              </div>
+            </div>
+
+            <div className={styles.btnWrapper}>
+                <SecondaryBtn text="Смотреть все" path="/gallery"/>
+            </div>
 
           </div>
         </section>

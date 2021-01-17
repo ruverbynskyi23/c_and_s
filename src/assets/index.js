@@ -15,16 +15,26 @@ const advantages = {
   'quality': require('./advantages/quality.svg').default,
   'sharpening': require('./advantages/sharpening.svg').default,
   'uniqueness': require('./advantages/uniqueness.svg').default,
-}
+};
 
 const btnSymbols = {
-  'secondaryBtn': require('./btn.svg').default,
-  'arrow': require('./arrow.svg').default
-}
+  'secondaryBtn': require('./btn/secondary_btn.svg').default,
+  'arrow': require('./btn/arrow.svg').default,
+  'arrowLft': require('./btn/arrow_left.svg').default,
+  'arrowRght': require('./btn/arrow_right.svg').default
+};
+
+const sliderImgs = {
+  'slide1': require('./slider/slide1.jpg').default,
+  'slide2': require('./slider/slide2.jpg').default,
+  'slide3': require('./slider/slide3.jpg').default,
+  'slide4': require('./slider/slide4.jpg').default
+};
 
 export {
   generalPics,
   social,
   advantages,
-  btnSymbols
+  btnSymbols,
+  sliderImgs
 }
