@@ -130,3 +130,17 @@
     margin: 38px 0;
   }
 }
+
+.inspiration {
+  padding: 140px 0;
+  background-color: #888;
+
+  .sectionTitle {
+    @include section-title;
+    margin-bottom: 50px;
+  }
+
+  .btnWrapper {
+    text-align: right;
+  }
+}

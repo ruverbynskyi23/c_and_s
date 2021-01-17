@@ -134,6 +134,20 @@ class Home extends React.Component {
 
           </div>
         </section>
+
+        <section className={styles.inspiration}>
+          <div className={styles.container}>
+            <h2 className={styles.sectionTitle}>Фото для вдохновения</h2>
+
+            <div className={styles.sliderWrapper}>
+
+
+              <div className={styles.btnWrapper}>
+                <SecondaryBtn text="Смотреть все" path="/gallery"/>
+              </div>
+            </div>
+          </div>
+        </section>
       </>
     )
   }
