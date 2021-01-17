@@ -133,11 +133,42 @@
 
 .inspiration {
   padding: 140px 0;
-  background-color: #888;
+
+  .container {
+    padding: 0 139px;
+  }
 
   .sectionTitle {
     @include section-title;
     margin-bottom: 50px;
+  }
+
+  .sliderWrapper {
+    position: relative;
+    max-height: 775px;
+    margin-bottom: 64px;
+
+    .spacer {
+      padding: 79px 0;
+      width: 775px;
+      background-color: #fff;
+      text-align: center;
+
+      transform-origin: 0 0;
+      transform: rotate(-90deg) translateY(-50%);
+
+      position: absolute;
+      top: 100%;
+      left: 50%;
+
+      z-index: 2;
+
+      .spacerText {
+        @include section-text(48px, 72px);
+        letter-spacing: 0.4em;
+        color: $light-grey;
+      }
+    }
   }
 
   .btnWrapper {
