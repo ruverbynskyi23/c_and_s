@@ -4,6 +4,7 @@ import SecondaryBtn from './SecondaryBtn/SecondaryBtn';
 import RoundBtn from './RoundBtn/RoundBtn';
 import Slider from './Slider/Slider';
 import Contacts from './Contacts/Contacts';
+import Footer from './Footer/Footer';
 
 export {
   Header,
@@ -11,5 +12,6 @@ export {
   SecondaryBtn,
   RoundBtn,
   Slider,
-  Contacts
+  Contacts,
+  Footer
 }
