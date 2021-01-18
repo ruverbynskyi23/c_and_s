@@ -1,0 +1,42 @@
+@import '../../sass/constants.scss';
+@import '../../sass/mixins.scss';
+
+.container {
+    @include container;
+    padding: 0 139px;
+}
+
+.contacts {
+    padding: 170px 0;
+    background-image: url('../../assets/contacts_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .sectionTitle {
+        @include section-title(64px, 90px);
+        font-weight: 600;
+        color: $white;
+        margin-bottom: 20px;
+    }
+    
+    .sectionText {
+        max-width: 574px;
+        @include section-text(28px, 36px);
+        letter-spacing: 0.04em;
+        color: $white;
+        margin-bottom: 46px;
+    }
+
+    .social {
+        display: flex;
+
+        .item {
+            margin-right: 26px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
