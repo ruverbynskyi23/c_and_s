@@ -1,5 +1,5 @@
 import { Switch, Route } from 'react-router-dom';
-import { Header, Contacts} from './components/index';
+import { Header, Contacts, Footer } from './components/index';
 import { Home } from './pages/index';
 import './App.css';
 
@@ -13,6 +13,7 @@ function App() {
         </Switch>
       </main>
       <Contacts />
+      <Footer />
     </div>
   );
 }
