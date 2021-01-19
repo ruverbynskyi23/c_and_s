@@ -31,10 +31,17 @@ const sliderImgs = {
   'slide4': require('./slider/slide4.jpg').default
 };
 
+const aboutUs = {};
+
+for(let i = 0; i < 7; i++) {
+  aboutUs[`pic${i + 1}`] = require(`./about/about${i + 1}.jpg`).default;
+}
+
 export {
   generalPics,
   social,
   advantages,
   btnSymbols,
-  sliderImgs
+  sliderImgs,
+  aboutUs
 }

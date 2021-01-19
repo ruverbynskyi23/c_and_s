@@ -16,7 +16,7 @@ class Footer extends React.Component {
                         <nav className={styles.navigation}>
                             <ul className={styles.navList}>
                                 <li className={styles.listItem}>
-                                    <Link className={styles.itemLink} to="/history">Наша история</Link>
+                                    <Link className={styles.itemLink} to="/about">Наша история</Link>
                                 </li>
                                 <li className={styles.listItem}>
                                     <Link className={styles.itemLink} to="/order">Ассортимент</Link>

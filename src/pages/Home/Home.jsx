@@ -109,7 +109,7 @@ class Home extends React.Component {
               <h2 className={styles.sectionTitle}>История<br/>нашего бренда</h2>
               <p className={styles.sectionText}>Мы долго взращивали идею создания украинского бренда парикмахерских ножниц. Без преувеличения работали днем и ночью, мечтая создать инструмент высокого качества, который понравится мастерам.</p>
 
-              <SecondaryBtn text="Подробнее" path="/history"/>
+              <SecondaryBtn text="Подробнее" path="/about"/>
             </div>
 
           </div>
