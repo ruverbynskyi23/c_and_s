@@ -37,11 +37,18 @@ for(let i = 0; i < 7; i++) {
   aboutUs[`pic${i + 1}`] = require(`./about/about${i + 1}.jpg`).default;
 }
 
+const gallery = {};
+
+for(let i = 1; i < 17; i++) {
+  gallery[`pic${i}`] = require(`./gallery/gallery${i}.jpg`).default;
+}
+
 export {
   generalPics,
   social,
   advantages,
   btnSymbols,
   sliderImgs,
-  aboutUs
+  aboutUs,
+  gallery
 }
