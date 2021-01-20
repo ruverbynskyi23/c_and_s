@@ -1,0 +1,15 @@
+@import '../../sass/mixins.scss';
+
+.container {
+    @include container;
+    padding: 0 139px;
+}
+
+.faqs {
+    padding: 216px 0 250px;
+
+    .sectionTitle {
+        @include section-title;
+        margin-bottom: 70px;
+    }
+}

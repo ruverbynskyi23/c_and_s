@@ -13,5 +13,5 @@ export {
   RoundBtn,
   Slider,
   Contacts,
-  Footer
+  Footer,
 }
