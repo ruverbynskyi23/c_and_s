@@ -1,0 +1,36 @@
+@import '../../sass/constants.scss';
+@import '../../sass/mixins.scss';
+
+.container {
+    @include container;
+    padding: 0 139px;
+}
+
+.order {
+    padding: 216px 0 250px;
+
+    .sectionTitle {
+        @include section-title;
+        margin-bottom: 50px;
+    }
+
+    .orderBlock {
+        display: flex;
+        align-items: center;
+    }
+
+    .productImg {
+        margin-right: 137px;
+    }
+
+    .name {
+        @include section-title(36px, 47px);
+        margin-bottom: 21px;
+    }
+
+    .description {
+        @include section-text;
+        letter-spacing: 0.015em;
+        margin-bottom: 39px;
+    }
+}

@@ -1,6 +1,6 @@
 import { Switch, Route } from 'react-router-dom';
 import { Header, Contacts, Footer } from './components/index';
-import { Home, About, Gallery, Faq } from './pages/index';
+import { Home, About, Gallery, Faq, Order } from './pages/index';
 import './App.css';
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
           <Route exact path="/about" component={About}/>
           <Route exact path="/gallery" component={Gallery}/>
           <Route exact path="/faqs" component={Faq}/>
+          <Route exact path="/order" component={Order}/>
         </Switch>
       </main>
       <Contacts />
