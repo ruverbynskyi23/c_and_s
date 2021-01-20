@@ -1,0 +1,25 @@
+@import '../../sass/constants.scss';
+@import '../../sass/mixins.scss';
+
+.container {
+    @include container;
+    padding: 0 139px;
+}
+
+.faqs {
+    padding: 216px 0 250px;
+
+    .sectionTitle {
+        @include section-title;
+        margin-bottom: 70px;
+    }
+
+    .questionList::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin-bottom: 46px;
+        background-color: $light-grey;
+    }
+}
