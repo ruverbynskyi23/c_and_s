@@ -5,6 +5,7 @@ import RoundBtn from './RoundBtn/RoundBtn';
 import Slider from './Slider/Slider';
 import Contacts from './Contacts/Contacts';
 import Footer from './Footer/Footer';
+import FaqQuestions from './FaqQuestion/FaqQuestion';
 
 export {
   Header,
@@ -14,4 +15,5 @@ export {
   Slider,
   Contacts,
   Footer,
+  FaqQuestions
 }
