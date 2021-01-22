@@ -43,6 +43,11 @@ for(let i = 1; i < 17; i++) {
   gallery[`pic${i}`] = require(`./gallery/gallery${i}.jpg`).default;
 }
 
+const product = {
+  'pic1': require('./order/product1.jpg').default,
+  'pic2': require('./order/product2.jpg').default,
+};
+
 export {
   generalPics,
   social,
@@ -50,5 +55,6 @@ export {
   btnSymbols,
   sliderImgs,
   aboutUs,
-  gallery
+  gallery,
+  product
 }

@@ -29,7 +29,7 @@ class Home extends React.Component {
               <MainBtn
                 id="order"
                 text="Заказать"
-                path="/"
+                path="/order"
                 status={this.state.activeBtn}
                 hover={this.handleBtnHover}
               />

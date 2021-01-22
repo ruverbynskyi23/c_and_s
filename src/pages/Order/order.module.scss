@@ -1,0 +1,255 @@
+@import '../../sass/constants.scss';
+@import '../../sass/mixins.scss';
+
+.container {
+    @include container;
+    padding: 0 139px;
+}
+
+.order {
+    padding: 216px 0 250px;
+
+    .sectionTitle {
+        @include section-title;
+        margin-bottom: 50px;
+    }
+
+    .orderBlock {
+        display: flex;
+        align-items: center;
+
+        position: relative;
+    }
+
+    .productImg {
+        margin-right: 137px;
+
+        .img {
+            box-shadow: 0px 82px 50px -63px $shadow;
+        }
+    }
+
+    .name {
+        @include section-title(36px, 47px);
+        margin-bottom: 21px;
+    }
+
+    .description {
+        @include section-text;
+        letter-spacing: 0.015em;
+        margin-bottom: 39px;
+    }
+
+    .orderForm {
+        .type {
+            .radio {
+                display: none;
+            }
+
+            .fakeRadio {
+                display: block;
+                @include section-text(26px, 39px);
+                font-weight: 600;
+                letter-spacing: 0.05em;
+                color: $light-grey;
+                cursor: pointer;
+
+                position: absolute;
+                left: 0;
+                top: calc(100% + 40px);
+            }
+
+            &:last-child .fakeRadio {
+                margin-left: 309px;
+            }
+
+            .radio:checked + .fakeRadio {
+                color: $green;
+            }
+        }
+
+        .prodColor {
+            display: flex;
+            align-items: center;
+            margin-bottom: 34px;
+
+            .legend {
+                float: left;
+                margin-right: 48px;
+            }
+
+            .color {
+                position: relative;
+
+                .radio {
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                .fakeRadio {
+                    display: inline-block;
+                    width: 64px;
+                    height: 30px;
+                    margin-right: 48px;
+                    cursor: pointer;
+                    position: relative;
+
+                    &.gold {
+                        background-color: $gold;
+                    }
+                    &.silver {
+                        background-color: $silver;
+                    }
+                    &.matSilver {
+                        background-color: $mat-silver;
+                    }
+
+                    &::before {
+                        content: "";
+                        display: none;
+                        width: 76px;
+                        height: 42px;
+                        border: 1px solid $mat-silver;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                .radio:checked + .fakeRadio::before {
+                    display: block;
+                }
+            }
+        }
+
+        .prodSize {
+            display: flex;
+            align-items: center;
+            margin-bottom: 34px;
+            
+            .legend {
+                float: left;
+                margin-right: 31px;
+            }
+
+            .size {
+                position: relative;
+                
+                .radio {
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                .fakeRadio {
+                    @include section-text(18px, 27px);
+                    color: $light-grey;
+                    margin-right: 20px;
+                    cursor: pointer;
+                }
+
+                .radio:checked + .fakeRadio {
+                    color: $dark-grey;
+                }
+            }
+        }
+
+        .options {
+            margin-bottom: 67px;
+            .option {
+                display: inline-flex;
+                align-items: center;
+                @include section-text(16px, 24px);
+                color: $light-grey;
+                cursor: pointer;
+                position: relative;
+
+                &:first-child {
+                    margin-right: 41px;
+                }
+    
+                .checkbox {
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+    
+                .fakeCheckbox {
+                    display: inline-block;
+                    width: 28px;
+                    height: 28px;
+                    border: solid 1px $mat-silver;
+                    margin-right: 18px;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        display: none;
+                        width: 24px;
+                        height: 24px;
+                        background-image: url('../../assets/btn/check.svg');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                .checkbox:checked + .fakeCheckbox + .text {
+                    color: $dark-grey;
+                }
+
+                .checkbox:checked + .fakeCheckbox::before {
+                    display: block;
+                }
+            }
+        }
+
+        .actionBlock {
+            display: flex;
+            align-items: center;
+
+            .price {
+                margin-right: 176px;
+                @include section-text(36px, 47px);
+                color: $black;
+            }
+    
+            .submitBtn {
+                padding: 0;
+                border: none;
+                background-color: transparent;
+                @include btn-text(#0C1E0C);
+                font-family: inherit;
+                letter-spacing: 0.15em;
+                position: relative;
+                cursor: pointer;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    background-color: $light-green;
+                    position: absolute;
+                    top: -45px;
+                    left: -41px;
+                    z-index: -1;
+                }
+                
+            }    
+        }
+    }
+}
