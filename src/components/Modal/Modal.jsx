@@ -1,7 +1,7 @@
 import React, { useState, useEffect }from 'react';
 import styles from './modal.module.scss';
 
-const Modal = ({ children, title}) => {
+const Modal = ({ children, title, closeModal}) => {
   const [ height, setHeight ] = useState(null);
 
   useEffect(() => {
@@ -10,9 +10,9 @@ const Modal = ({ children, title}) => {
   }, []);
 
   return (
-    <div className={styles.layout} style={{height: height}}>
+    <div className={styles.layout} style={{height: height}} onClick={closeModal}>
       <div className={styles.modal}>
-        <button className={styles.closeBtn}></button>
+        <button className={styles.closeBtn} onClick={closeModal}></button>
         <h3 className={styles.modalTitle}>{title}</h3>
         {children}
       </div>

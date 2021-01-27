@@ -3,9 +3,9 @@ import Modal from '../Modal/Modal';
 import { MainBtn } from '../../components/index';
 import styles from './orderModal.module.scss';
 
-const OrderModal = () => {
+const OrderModal = ({ closeModal }) => {
   return (
-    <Modal title="Оформление заказа">
+    <Modal title="Оформление заказа" closeModal={closeModal}>
         <div className={styles.formWrapper}>
             <form>
                 <fieldset className={styles.userData}>
