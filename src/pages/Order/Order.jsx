@@ -1,5 +1,6 @@
 import React from 'react';
 import { product } from '../../assets/index';
+import { OrderModal } from '../../components/index';
 import styles from './order.module.scss';
 
 class Order extends React.Component {
@@ -87,13 +88,15 @@ class Order extends React.Component {
 
                                 <div className={styles.actionBlock}>
                                     <span className={styles.price}>700 грн.</span>
-                                    {/* <input className={styles.submitBtn} type="submit" value="Заказать"/> */}
                                     <button className={styles.submitBtn}>Заказать</button>
                                 </div>
                             </form>
                         </div>
 
                     </div>
+
+                    <OrderModal />
+
                 </div>
             </section>
         )

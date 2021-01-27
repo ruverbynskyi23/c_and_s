@@ -6,6 +6,8 @@ import Slider from './Slider/Slider';
 import Contacts from './Contacts/Contacts';
 import Footer from './Footer/Footer';
 import FaqQuestions from './FaqQuestion/FaqQuestion';
+import Modal from './Modal/Modal';
+import OrderModal from './OrderModal/OrderModal'
 
 export {
   Header,
@@ -15,5 +17,7 @@ export {
   Slider,
   Contacts,
   Footer,
-  FaqQuestions
+  FaqQuestions,
+  Modal,
+  OrderModal
 }
