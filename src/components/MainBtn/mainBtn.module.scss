@@ -38,4 +38,19 @@
       transform: scale(1);
     }
   }
+
+  &.submit {
+    background-color: transparent;
+    font-family: inherit;
+    color: $black;
+    cursor: pointer;
+
+    &::before {
+      transform: none;
+    }
+    
+    &:last-child {
+      margin-bottom: 139px;
+    }
+  }
 }

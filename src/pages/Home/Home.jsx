@@ -27,6 +27,7 @@ class Home extends React.Component {
 
             <div className={styles.actionBlock}>
               <MainBtn
+                type="link"
                 id="order"
                 text="Заказать"
                 path="/order"
@@ -34,6 +35,7 @@ class Home extends React.Component {
                 hover={this.handleBtnHover}
               />
               <MainBtn
+                type="link"
                 id="detail"
                 text="Подробнее"
                 path="/"

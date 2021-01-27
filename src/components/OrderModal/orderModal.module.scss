@@ -1,0 +1,214 @@
+@import '../../sass/mixins.scss';
+
+.userData,
+.paymentData,
+.deliveryInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.formWrapper {
+  width: 491px;
+  margin: 0 287px;
+}
+
+.legend {
+  padding-left: 14px;
+  @include section-text;
+  letter-spacing: 0.025em;
+  margin-bottom: 30px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 22px;
+    background-color: $green;
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%);
+  }
+}
+
+.userData {
+  margin-bottom: 46px;
+  
+  .personalInfo {
+    &:nth-child(3) {
+
+      .field {
+        font-family: $Sarabun;
+      }
+    }
+  }
+
+
+  .fieldName {
+    display: block;
+    @include section-text(16px, 24px);
+    color: $pale-green;
+    letter-spacing: 0.015em;
+    margin-bottom: 11px;
+  }
+
+  .field {
+    padding: 9px 16px;
+    width: 100%;
+    border: solid 1px $light-grey;
+    @include section-text(16px, 24px);
+    font-family: inherit;
+    letter-spacing: 0.015em;
+    margin-bottom: 40px;
+
+    &::placeholder {
+      color: $dark-silver;
+    }
+  }
+
+  .area {
+    padding: 12px 16px;
+    width: 100%;
+    border: solid 1px $light-grey;
+    @include section-text(16px, 24px);
+    font-family: inherit;
+    letter-spacing: 0.015em;
+    resize: none;
+
+    &::placeholder {
+      color: $dark-silver;
+    }
+  }
+}
+
+.paymentData {
+  margin-bottom: 46px;
+
+  .paymentOption {
+    display: flex;
+    align-items: center;
+
+    .radio {
+      display: none;
+    }
+
+    .fakeRadio {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      margin-right: 19px;
+      border-radius: 50%;
+      border: solid 1px $pale-green;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: none;
+        width: 14px;
+        height: 14px;
+        background-color: $pale-green;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .radioName {
+      @include section-text(16px, 24px);
+      color: $dark-silver;
+    }
+
+    .radio:checked + .fakeRadio + .radioName {
+      color: $dark-grey;
+    }
+
+    .radio:checked + .fakeRadio::before {
+      display: block;
+    }
+    
+    &:last-child {
+      margin-top: 14px;
+    }
+  }
+}
+
+.deliveryInfo {
+  margin-bottom: 30px;
+
+  .deliveryOption {
+    margin-bottom: 22px;
+
+    .select {
+      padding: 9px 16px;
+      width: 100%;
+      border: solid 1px $light-grey;
+      @include section-text(16px, 24px);
+      font-family: inherit;
+      color: $dark-silver;
+
+      .option {
+        border: none;
+        @include section-text(16px, 24px);
+        color: $dark-silver;
+
+        &:focus {
+          color: $green;
+        }
+      }
+    }
+  }
+}
+
+.userAgreement {
+  margin-bottom: 95px;
+  .agreement {
+    display: flex;
+    align-items: center;
+    @include section-text(16px, 24px);
+    color: $dark-silver;
+    position: relative;
+  }
+
+  .checkbox {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .fakeCheckbox {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border: solid 1px $dark-silver;
+    margin-right: 12px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: none;
+      width: 24px;
+      height: 24px;
+      background-image: url('../../assets/btn/check.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .checkbox:checked + .fakeCheckbox::before {
+    display: block;
+  }
+}

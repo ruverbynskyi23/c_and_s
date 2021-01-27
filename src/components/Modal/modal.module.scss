@@ -1,0 +1,40 @@
+@import '../../sass/constants.scss';
+@import '../../sass/mixins.scss';
+
+.layout {
+  padding-top: 268px;
+  width: 100%;
+  text-align: center;
+  background-color: hsla(120, 2%, 32%, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .modal {
+    display: inline-block;
+    padding-top: 106px;
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+
+    .modalTitle {
+      @include section-title(36px, 48px);
+      margin-bottom: 52px;
+    }
+
+    .closeBtn {
+      width: 42px;
+      height: 42px;
+      background-color: transparent;
+      background-image: url('../../assets/btn/cross.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+
+      position: absolute;
+      top: 24px;
+      right: 24px;
+    }
+  }
+}
