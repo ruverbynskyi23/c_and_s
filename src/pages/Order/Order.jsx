@@ -4,6 +4,26 @@ import { OrderModal } from '../../components/index';
 import styles from './order.module.scss';
 
 class Order extends React.Component {
+    constructor() {
+        super();
+
+        this.state = {
+            isModalOpen: true,
+        };
+
+        this.closeModal = this.closeModal.bind(this);
+    }
+
+    closeModal(e) {
+        const target = e.target;
+
+        if(target.className.includes('layout') || target.className.includes('closeBtn')) {
+            this.setState({isModalOpen: false});
+        }
+        
+        return;
+    }
+
     render() {
         return (
             <section className={styles.order}>
@@ -95,7 +115,7 @@ class Order extends React.Component {
 
                     </div>
 
-                    <OrderModal />
+                    {this.state.isModalOpen ? <OrderModal closeModal={this.closeModal}/> : ''}
 
                 </div>
             </section>
