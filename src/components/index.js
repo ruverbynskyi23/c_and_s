@@ -7,7 +7,8 @@ import Contacts from './Contacts/Contacts';
 import Footer from './Footer/Footer';
 import FaqQuestions from './FaqQuestion/FaqQuestion';
 import Modal from './Modal/Modal';
-import OrderModal from './OrderModal/OrderModal'
+import OrderModal from './OrderModal/OrderModal';
+import ThanksModal from './ThanksModal/ThanksModal';
 
 export {
   Header,
@@ -19,5 +20,6 @@ export {
   Footer,
   FaqQuestions,
   Modal,
-  OrderModal
+  OrderModal,
+  ThanksModal
 }

@@ -1,0 +1,8 @@
+@import '../../sass/constants.scss';
+@import '../../sass/mixins.scss';
+
+.modalText {
+  @include section-text(24px, 36px);
+  color: $white;
+  margin-bottom: 64px;
+}

@@ -37,4 +37,23 @@
       right: 24px;
     }
   }
+
+  .thanks {
+    padding: 343px 0 208px;
+    max-width: 1063px;
+    background-image: url('../../assets/scissors3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 5px 15px 20px rgba(94, 102, 102, 0.36);
+
+    .modalTitle {
+      margin: 0 296px;
+      @include section-title(36px, 47px);
+      font-weight: 600;
+      color: $white;
+      margin-bottom: 14px;
+    }
+  }
 }

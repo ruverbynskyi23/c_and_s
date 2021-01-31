@@ -1,6 +1,6 @@
 import React from 'react';
 import { product } from '../../assets/index';
-import { OrderModal } from '../../components/index';
+import { OrderModal, ThanksModal } from '../../components/index';
 import styles from './order.module.scss';
 
 class Order extends React.Component {
@@ -8,7 +8,8 @@ class Order extends React.Component {
         super();
 
         this.state = {
-            isModalOpen: true,
+            isModalOpen: false,
+            isOrderComplete: true,
         };
 
         this.closeModal = this.closeModal.bind(this);
@@ -16,9 +17,13 @@ class Order extends React.Component {
 
     closeModal(e) {
         const target = e.target;
+        console.log(e);
 
         if(target.className.includes('layout') || target.className.includes('closeBtn')) {
-            this.setState({isModalOpen: false});
+            this.setState({
+                isModalOpen: false,
+                isOrderComplete: false
+            });
         }
         
         return;
@@ -116,6 +121,7 @@ class Order extends React.Component {
                     </div>
 
                     {this.state.isModalOpen ? <OrderModal closeModal={this.closeModal}/> : ''}
+                    {this.state.isOrderComplete ? <ThanksModal closeModal={this.closeModal} /> : ''}
 
                 </div>
             </section>
