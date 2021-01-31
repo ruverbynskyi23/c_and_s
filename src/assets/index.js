@@ -19,6 +19,7 @@ const advantages = {
 
 const btnSymbols = {
   'secondaryBtn': require('./btn/secondary_btn.svg').default,
+  'secondaryBtn2': require('./btn/secondary_btn2.svg').default,
   'arrow': require('./btn/arrow.svg').default,
   'arrowLft': require('./btn/arrow_left.svg').default,
   'arrowRght': require('./btn/arrow_right.svg').default

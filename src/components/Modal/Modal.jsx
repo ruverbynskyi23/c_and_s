@@ -1,7 +1,7 @@
 import React, { useState, useEffect }from 'react';
 import styles from './modal.module.scss';
 
-const Modal = ({ children, title, closeModal}) => {
+const Modal = ({ children, type, title, closeModal }) => {
   const [ height, setHeight ] = useState(null);
 
   useEffect(() => {
@@ -9,9 +9,10 @@ const Modal = ({ children, title, closeModal}) => {
     setTimeout(() => { setHeight(document.documentElement.scrollHeight) }, 50);
   }, []);
 
+  console.log(children);
   return (
     <div className={styles.layout} style={{height: height}} onClick={closeModal}>
-      <div className={styles.modal}>
+      <div className={`${styles.modal} ${type === 'thanks' ? styles.thanks : ''}`}>
         <button className={styles.closeBtn} onClick={closeModal}></button>
         <h3 className={styles.modalTitle}>{title}</h3>
         {children}
