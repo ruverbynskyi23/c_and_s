@@ -1,0 +1,28 @@
+@import '../../sass/constants.scss';
+@import '../../sass/mixins.scss';
+
+.container {
+  @include container;
+  padding: 376px 0 345px;
+  text-align: center;
+}
+
+.notFound {
+  background-image: url('../../assets/404_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .sectionTitle {
+    @include section-title(100px, 130px);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  
+  .sectionText {
+    @include section-text(52px, 68px);
+    font-weight: 600;
+    margin-bottom: 155px;
+    color: $black;
+  }
+}
