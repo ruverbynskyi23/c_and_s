@@ -38,7 +38,7 @@ class Home extends React.Component {
                 type="link"
                 id="detail"
                 text="Подробнее"
-                path="/"
+                path="/about"
                 status={this.state.activeBtn}
                 hover={this.handleBtnHover}
               />
