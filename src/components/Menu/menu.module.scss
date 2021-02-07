@@ -1,0 +1,36 @@
+@import '../../sass/constants.scss';
+@import '../../sass/mixins.scss';
+
+.menu {
+  margin-top: 150px;
+  background: transparent;
+  text-align: center;
+
+  .navigation {
+    display: inline-block;
+
+    .navList {
+      display: inline-flex;
+      flex-direction: column;
+    }
+
+    .listItem {
+      width: 338px;
+      margin-bottom: 36px;
+      text-align: left;
+      transition: padding-left .4s ease;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .link {
+        text-decoration: none;
+        @include btn-text($black, 36px, 50px);
+        font-family: $Playfair;
+
+        transition: color .4s ease;
+      }
+    }
+  }
+}
