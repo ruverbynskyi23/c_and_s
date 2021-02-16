@@ -9,6 +9,7 @@ import FaqQuestions from './FaqQuestion/FaqQuestion';
 import Modal from './Modal/Modal';
 import OrderModal from './OrderModal/OrderModal';
 import ThanksModal from './ThanksModal/ThanksModal';
+import Menu from './Menu/Menu';
 
 export {
   Header,
@@ -21,5 +22,6 @@ export {
   FaqQuestions,
   Modal,
   OrderModal,
-  ThanksModal
+  ThanksModal,
+  Menu
 }

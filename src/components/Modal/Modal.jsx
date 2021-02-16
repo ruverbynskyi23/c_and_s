@@ -9,7 +9,6 @@ const Modal = ({ children, type, title, closeModal }) => {
     setTimeout(() => { setHeight(document.documentElement.scrollHeight) }, 50);
   }, []);
 
-  console.log(children);
   return (
     <div className={styles.layout} style={{height: height}} onClick={closeModal}>
       <div className={`${styles.modal} ${type === 'thanks' ? styles.thanks : ''}`}>

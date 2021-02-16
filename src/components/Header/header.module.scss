@@ -2,16 +2,24 @@
 @import '../../sass/mixins.scss';
 
 .header {
-  padding: 48px 0;
+  padding-top: 48px;
   width: 100%;
+  height: 158px;
+  
   background-color: transparent;
   font-family: $Sarabun;
+
+  overflow: hidden;
+  transition: height .5s ease, background-color .5s ease;
+
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 2;
 
   .container {
     @include container;
+    margin-bottom: 48px;
     display: flex;
     align-items: center;
   }
@@ -31,7 +39,7 @@
       font-weight: 500;
       letter-spacing: 0.05em;
     }
-  }
+  }  
 
   .burgerMenu {
     border: none;
@@ -46,7 +54,7 @@
       height: 3px;
       border-radius: 2px;
       background-color: #fff;
-      transition: transform 0.3s ease;
+      transition: transform .3s ease;
     }
 
     &::after {
@@ -56,21 +64,25 @@
       height: 3px;
       border-radius: 2px;
       background-color: #fff;
-      transition: transform 0.3s ease;
+      transition: transform .3s ease;
     }
 
-    .middleLine::before {
-      content: "";
-      display: block;
-      width: 30px;
-      height: 3px;
-      margin: 8px 0;
-      border-radius: 2px;
-      background: white;
-      transition: width 0.2s ease;
+    .middleLine {
+      pointer-events: none;
+      
+      &::before {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 8px 0;
+        border-radius: 2px;
+        background: white;
+        transition: width 0.2s ease;
+      }
     }
 
-    &:hover,  &:focus {
+    &.open {
       &::before {
         transform: translateY(11px) rotate(45deg);
       }
@@ -81,6 +93,21 @@
       
       .middleLine::before {
         width: 0; 
+      }
+    }
+  }
+
+  &.menuOpen {
+    background-color: $white;
+    height: 100vh;
+
+    .listItem {
+      visibility: hidden;
+    }
+    
+    .burgerMenu {
+      &::before, &::after, .middleLine::before {
+        background-color: black
       }
     }
   }

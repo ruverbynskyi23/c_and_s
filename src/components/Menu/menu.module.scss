@@ -1,0 +1,42 @@
+@import '../../sass/constants.scss';
+@import '../../sass/mixins.scss';
+
+.menu {
+  margin-top: 150px;
+  margin-bottom: 260px;
+  background: transparent;
+  text-align: center;
+
+  .navigation {
+    display: inline-block;
+
+    .navList {
+      display: inline-flex;
+      flex-direction: column;
+    }
+
+    .listItem {
+      width: 338px;
+      margin-bottom: 36px;
+      text-align: left;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .link {
+        text-decoration: none;
+        @include btn-text($black, 36px, 50px);
+        font-family: $Playfair;
+        cursor: pointer;
+
+        transition: color .5s ease, padding-left .5s ease;
+
+        &:hover {
+          padding-left: 20px;
+          color: $green;
+        }
+      }
+    }
+  }
+}
