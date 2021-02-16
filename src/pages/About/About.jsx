@@ -22,10 +22,9 @@ class About extends React.Component {
             return;
         }
 
-        this.setState({openImgId: e.target.id}, () => {
-            console.log(this.state);
-        })
+        this.setState({openImgId: e.target.id});
     }
+    
     render() {
         const accordionImgs = [];
     

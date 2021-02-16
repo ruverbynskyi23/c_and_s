@@ -3,6 +3,7 @@
 
 .menu {
   margin-top: 150px;
+  margin-bottom: 260px;
   background: transparent;
   text-align: center;
 
@@ -18,7 +19,6 @@
       width: 338px;
       margin-bottom: 36px;
       text-align: left;
-      transition: padding-left .4s ease;
 
       &:last-child {
         margin-bottom: 0;
@@ -28,8 +28,14 @@
         text-decoration: none;
         @include btn-text($black, 36px, 50px);
         font-family: $Playfair;
+        cursor: pointer;
 
-        transition: color .4s ease;
+        transition: color .5s ease, padding-left .5s ease;
+
+        &:hover {
+          padding-left: 20px;
+          color: $green;
+        }
       }
     }
   }

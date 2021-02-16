@@ -10,24 +10,39 @@ class Header extends React.Component {
 
     this.state = {
       isMenuOpen: false,
+      scrollWidth: null,
     }
 
     this.handleMenuClick = this.handleMenuClick.bind(this);
   }
 
-  handleMenuClick () {
-    const { isMenuOpen } = this.state;
+  componentDidMount() {
+    const clientWidth = document.body.clientWidth,
+          innerWidth = window.innerWidth;
 
-    this.setState({isMenuOpen: !isMenuOpen}, () => {
-      console.log(this.state.isMenuOpen);
-    })
+    this.setState({scrollWidth: innerWidth - clientWidth});
   }
 
+  handleMenuClick (e) {
+    const { isMenuOpen } = this.state,
+          target = e.target;
+    
+    if(target.className.includes('burgerMenu') || target.className.includes('link')) {
+      this.setState({isMenuOpen: !isMenuOpen})
+    }
+
+    return;
+  }
+
+
   render() {
-    const { isMenuOpen } = this.state;
+    const { isMenuOpen, scrollWidth } = this.state;
 
     return (
-      <header className={`${styles.header} ${isMenuOpen ? styles.menuOpen : ''}`}>
+      <header
+        className={`${styles.header} ${isMenuOpen ? styles.menuOpen : ''}`}
+        style={isMenuOpen ? {paddingRight: scrollWidth + 'px'} : {}}
+      >
         <div className={styles.container}>
           <Link className={styles.logo} to="/">
             <img src={generalPics.logo} alt="логотип"/>
@@ -50,7 +65,7 @@ class Header extends React.Component {
           </button>
         </div>
 
-        {isMenuOpen ? <Menu /> : ''}
+        {isMenuOpen ? <Menu paddingValue={scrollWidth} handleClick={this.handleMenuClick} /> : ''}
       </header>
     )
   }

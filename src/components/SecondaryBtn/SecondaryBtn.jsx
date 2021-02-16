@@ -8,8 +8,6 @@ class SecondaryBtn extends React.Component {
     const { text, path, type } = this.props;
     const isWhite = type === 'white';
 
-    console.log(isWhite);
-
     return(
       <Link className={`${styles.btn} ${isWhite ? styles.white : ''}`} to={path}>
         {text}

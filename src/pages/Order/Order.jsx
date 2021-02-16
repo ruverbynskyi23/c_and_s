@@ -17,7 +17,6 @@ class Order extends React.Component {
 
     closeModal(e) {
         const target = e.target;
-        console.log(e);
 
         if(target.className.includes('layout') || target.className.includes('closeBtn')) {
             this.setState({
