@@ -9,13 +9,49 @@
   display: inline-flex;
   align-items: center;
   text-decoration: none;
+
+  position: relative;
   
-  .btnImg {
-    margin-left: 20px;
-    color: $white;
+  &::before {
+    content: "";
+    display: block;
+    width: 34px;
+    height: 34px;
+    border: solid 1px $green;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: -54px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 67px;
+    height: 1px;
+    background-color: $green;
+    position: absolute;
+    top: 16.5px;
+    right: -104px;
+
+    transition: right .3s ease;
+  }
+
+  &:hover {
+    &::after {
+      right: -120px;
+    }
   }
 }
 
 .white {
   color: $white;
+
+  &::before {
+    border-color: $white;
+  }
+
+  &::after {
+    background-color: $white;
+  }
 }
