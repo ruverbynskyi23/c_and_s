@@ -23,17 +23,16 @@ const btnSymbols = {
   'arrowRght': require('./btn/arrow_right.svg').default
 };
 
-const sliderImgs = {
-  'slide1': require('./slider/slide1.jpg').default,
-  'slide2': require('./slider/slide2.jpg').default,
-  'slide3': require('./slider/slide3.jpg').default,
-  'slide4': require('./slider/slide4.jpg').default
-};
+const sliderImgs = {};
+
+for(let i = 1; i < 11; i++) {
+  sliderImgs[`slide${i}`] = require(`./slider/slide${i}.jpg`).default;
+}
 
 const aboutUs = {};
 
-for(let i = 0; i < 7; i++) {
-  aboutUs[`pic${i + 1}`] = require(`./about/about${i + 1}.jpg`).default;
+for(let i = 1; i < 8; i++) {
+  aboutUs[`pic${i}`] = require(`./about/about${i}.jpg`).default;
 }
 
 const gallery = {};
