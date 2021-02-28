@@ -19,6 +19,7 @@
 
         .question {
             @include section-title(26px, 39px);
+            font-weight: 600;
             letter-spacing: 0.05em;
             margin-bottom: 15px;
         }    
@@ -31,7 +32,7 @@
         max-height: 0;
         overflow-y: hidden;
 
-        transition: max-height .5s ease;   
+        transition: max-height .6s ease;   
     }
 
     .openAnswerBtn {
@@ -72,13 +73,20 @@
         }
     }
 
+    .warningMessage {
+      display: none;
+      &.show {
+        display: block;
+      }
+    }
+
     &.open {
         .openAnswerBtn::after {
           transform: rotate(0deg) translate(-50%, -50%);
         }
 
         .answer {
-          max-height: 90px;
+          max-height: 115px;
           transition: max-height 1s ease;
         }
       }    
