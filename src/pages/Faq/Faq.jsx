@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaqQuestions } from '../../components/index';
+import data from '../../data/pagesTextContent.json';
 import styles from './faq.module.scss';
 
 class Faq extends React.Component {
@@ -7,33 +8,16 @@ class Faq extends React.Component {
         super();
     
         this.state = {
-          faqs: [
-            {
-              question: 'Как сделать заказ?',
-              answer: 'Некоторые продавцы ножниц громко заявляют о том, что их ножницы, мол, точат себя сами. Якобы одно лезвие сделано из более твердого',
-              open: false
-            },
-            {
-              question: 'Как сделать заказ?',
-              answer: 'Некоторые продавцы ножниц громко заявляют о том, что их ножницы, мол, точат себя сами. Якобы одно лезвие сделано из более твердого',
-              open: false
-            },
-            {
-              question: 'Как сделать заказ?',
-              answer: 'Некоторые продавцы ножниц громко заявляют о том, что их ножницы, мол, точат себя сами. Якобы одно лезвие сделано из более твердого',
-              open: false
-            },
-            {
-              question: 'Как сделать заказ?',
-              answer: 'Некоторые продавцы ножниц громко заявляют о том, что их ножницы, мол, точат себя сами. Якобы одно лезвие сделано из более твердого',
-              open: false
-            }
-          ]
+          faqs: [],
         }
 
         this.openAnswer = this.openAnswer.bind(this);
     }
-    
+
+    componentWillMount() {
+      this.setState({faqs: data.faqs});
+    }
+
     openAnswer(i) {
         const { faqs } = this.state;
 
@@ -62,7 +46,6 @@ class Faq extends React.Component {
                             return <FaqQuestions item={item} index={i} handleClick={this.openAnswer} key={i}/>
                         })}
                     </ul>
-
                 </div>
             </section>    
         )

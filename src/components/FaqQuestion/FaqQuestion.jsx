@@ -15,6 +15,7 @@ class FaqQuestion extends React.Component {
                 </div>
                 <div className={`${styles.answer}`}>
                     <p>{this.props.item.answer}</p>
+                    <p className={`${styles.warningMessage} ${this.props.index === 1 ? styles.show : ''}`}><b>Важно!</b> Ножницы с индивидуальной гравировкой отправляем только по 100% предоплате.</p>
                 </div>
             </li>
         )
