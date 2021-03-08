@@ -47,18 +47,18 @@ class Home extends React.Component {
             <nav className={styles.sidebar}>
               <ul>
                 <li className={styles.link}>
-                  <a href="#">
-                    <img src={social.inst} alt="instagram"/>
+                  <a href="https://www.instagram.com/caesarscissors/?hl=en" target="_blank" rel="noreferrer">
+                    <img src={social.inst} alt="инстаграм"/>
                   </a>
                 </li>
                 <li className={styles.link}>
-                  <a href="#">
-                    <img src={social.viber} alt="viber"/>
+                  <a href="viber://chat?number=380506774905" target="_blank" rel="noreferrer">
+                    <img src={social.viber} alt="вайбер"/>
                   </a>
                 </li>
                 <li className={styles.link}>
-                  <a href="#">
-                    <img src={social.tlgm} alt="telegram"/>
+                  <a href="https://t.me/evgeniyCandS" target="_blank" rel="noreferrer">
+                    <img src={social.tlgm} alt="телеграм"/>
                   </a>
                 </li>
               </ul>

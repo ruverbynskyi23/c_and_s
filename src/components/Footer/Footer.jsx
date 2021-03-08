@@ -36,8 +36,8 @@ class Footer extends React.Component {
                                 <p className={styles.text}>пн-вс 9:00 - 21:00</p>
                             </div>
                             <div className={styles.phones}>
-                                <a className={styles.phone} href="tel:+380994657834">+380994657834</a>
-                                <a className={styles.phone} href="tel:+380994657834">+380994657834</a>
+                                <a className={styles.phone} href="tel:+380684919005">+380684919005</a>
+                                <a className={styles.phone} href="tel:+380937278665">+380937278665</a>
                             </div>
                         </div>
                     </section>
