@@ -50,10 +50,10 @@ class Header extends React.Component {
 
           <ul className={styles.contactList}>
             <li className={styles.listItem}>
-              <a href="tel:+380994657834" className={styles.phone}>+380994657834</a>
+              <a href="tel:+380684919005" className={styles.phone}>+380684919005</a>
             </li>
             <li className={styles.listItem}>
-              <a href="tel:+380994657834" className={styles.phone}>+380994657834</a>
+              <a href="tel:+380937278665" className={styles.phone}>+380937278665</a>
             </li>
           </ul>
 
