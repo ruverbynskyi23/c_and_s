@@ -1,12 +1,24 @@
-import { Switch, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Switch, Route, useLocation } from 'react-router-dom';
 import { Header, Contacts, Footer } from './components/index';
 import { Home, About, Gallery, Faq, Order, NotFound} from './pages/index';
 import './App.css';
 
 function App() {
+  const [ darkStyle, setDarkStyle ] = useState(false);
+  const location = useLocation().pathname;
+
+  useEffect(() => {
+    if(location !== '/') {
+      setDarkStyle(true);
+    } else {
+      setDarkStyle(false);
+    }
+  }, [location]);
+
   return (
     <div className="App">
-      <Header />
+      <Header darkTheme={darkStyle} />
       <main>
         <Switch>
           <Route exact path="/" component={Home}/>

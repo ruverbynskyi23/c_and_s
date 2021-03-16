@@ -37,10 +37,11 @@ class Header extends React.Component {
 
   render() {
     const { isMenuOpen, scrollWidth } = this.state;
+    const { darkTheme } = this.props;
 
     return (
       <header
-        className={`${styles.header} ${isMenuOpen ? styles.menuOpen : ''}`}
+        className={`${styles.header} ${isMenuOpen ? styles.menuOpen : ''} ${darkTheme ? styles.dark : ''}`}
         style={isMenuOpen ? {paddingRight: scrollWidth + 'px'} : {}}
       >
         <div className={styles.container}>
