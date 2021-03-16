@@ -10,6 +10,7 @@ import Modal from './Modal/Modal';
 import OrderModal from './OrderModal/OrderModal';
 import ThanksModal from './ThanksModal/ThanksModal';
 import Menu from './Menu/Menu';
+import ScrollToTop from './ScrollToTop/ScrollToTop';
 
 export {
   Header,
@@ -23,5 +24,6 @@ export {
   Modal,
   OrderModal,
   ThanksModal,
-  Menu
+  Menu,
+  ScrollToTop,
 }
