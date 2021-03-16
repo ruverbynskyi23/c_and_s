@@ -111,4 +111,21 @@
       }
     }
   }
+
+  &.dark {
+    .phone {
+      color: $dark-grey;
+    }
+
+    .burgerMenu {
+      &::before,
+      &::after {
+        background-color: $dark-grey;
+      }
+    }
+
+    .middleLine::before {
+      background-color: $dark-grey;
+    }
+  }
 }
