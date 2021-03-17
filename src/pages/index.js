@@ -4,6 +4,7 @@ import Gallery from './Gallery/Gallery';
 import Faq from './Faq/Faq';
 import Order from './Order/Order';
 import NotFound from './NotFound/NotFound';
+import ComingSoon from './ComingSoon/ComingSoon';
 
 export {
   Home,
@@ -11,5 +12,6 @@ export {
   Gallery,
   Faq,
   Order,
-  NotFound
+  NotFound,
+  ComingSoon
 }

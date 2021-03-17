@@ -1,0 +1,50 @@
+@import '../../sass/constants.scss';
+@import '../../sass/mixins.scss';
+
+.container {
+    @include container;
+    text-align: center;
+}
+
+.coming {
+    padding: 307px 0 281px;
+
+    .title {
+        @include section-title(48px, 72px);
+        font-weight: 600;
+        margin-bottom: 89px;
+    }
+
+    .contactList {
+        @include section-text(20px, 30px);
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: 192px;
+        
+        .contact {
+            &:not(.contact:last-child) {
+                margin-right: 64px;
+            }
+
+            &:first-child {
+                .link {
+                    font-family: $Sarabun;
+                }
+            }
+
+            .link {
+                @include section-text(24px, 36px);
+                font-weight: bold;
+                text-decoration: none;
+                color: $black;
+            }
+        }
+    }
+
+    .message {
+        @include section-text(24px, 31px);
+        color: $grey;
+    }
+}
