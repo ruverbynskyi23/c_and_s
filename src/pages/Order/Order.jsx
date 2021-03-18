@@ -1,6 +1,6 @@
 import React from 'react';
 import { product } from '../../assets/index';
-import { OrderModal, ThanksModal } from '../../components/index';
+// import { OrderModal, ThanksModal } from '../../components/index';
 import styles from './order.module.scss';
 
 class Order extends React.Component {
@@ -8,24 +8,31 @@ class Order extends React.Component {
         super();
 
         this.state = {
-            isModalOpen: false,
-            isOrderComplete: true,
+            // isModalOpen: false,
+            // isOrderComplete: true,
         };
 
-        this.closeModal = this.closeModal.bind(this);
+        // this.closeModal = this.closeModal.bind(this);
+        this.handleFormSubmit = this.handleFormSubmit.bind(this);
     }
 
-    closeModal(e) {
-        const target = e.target;
+    // closeModal(e) {
+    //     const target = e.target;
 
-        if(target.className.includes('layout') || target.className.includes('closeBtn')) {
-            this.setState({
-                isModalOpen: false,
-                isOrderComplete: false
-            });
-        }
+    //     if(target.className.includes('layout') || target.className.includes('closeBtn')) {
+    //         this.setState({
+    //             isModalOpen: false,
+    //             isOrderComplete: false
+    //         });
+    //     }
         
-        return;
+    //     return;
+    // }
+
+    handleFormSubmit(e) {
+        e.preventDefault();
+        const { history } = this.props;
+        history.push('/coming-soon');
     }
 
     render() {
@@ -44,14 +51,14 @@ class Order extends React.Component {
                             <h3 className={styles.name}>Ножницы парикмахерские со съемным упором</h3>
                             <p className={styles.description}>Некоторые продавцы ножниц громко заявляют о том, что их ножницы, мол, точат себя сами. Якобы одно лезвие сделано из более твердого </p>
 
-                            <form className={styles.orderForm}>
+                            <form className={styles.orderForm} onSubmit={this.handleFormSubmit}>
                                 <fieldset>
                                     <label className={styles.type}>
-                                        <input className={styles.radio} type="radio" name="type" value="съемный упор"/>
+                                        <input className={styles.radio} type="radio" name="type" value="removable" defaultChecked/>
                                         <span className={styles.fakeRadio}>Съемный упор</span>
                                     </label>
                                     <label className={styles.type}>
-                                        <input className={styles.radio} type="radio" name="type" value="литой упор"/>
+                                        <input className={styles.radio} type="radio" name="type" value="cast"/>
                                         <span className={styles.fakeRadio}>Литой упор</span>
                                     </label>
                                 </fieldset>
@@ -59,15 +66,15 @@ class Order extends React.Component {
                                 <fieldset className={styles.prodColor}>
                                     <legend className={styles.legend}>Цвет:</legend>
                                     <label className={styles.color}>
-                                        <input className={styles.radio} type="radio" name="color" value="золотой"/>
+                                        <input className={styles.radio} type="radio" name="color" value="gold"/>
                                         <span className={`${styles.fakeRadio} ${styles.gold}`}></span>
                                     </label>
                                     <label className={styles.color}>
-                                        <input className={styles.radio} type="radio" name="color" value="серый"/>
+                                        <input className={styles.radio} type="radio" name="color" value="gray" defaultChecked/>
                                         <span className={`${styles.fakeRadio} ${styles.silver}`}></span>
                                     </label>
                                     <label className={styles.color}>
-                                        <input className={styles.radio} type="radio" name="color" value="черный"/>
+                                        <input className={styles.radio} type="radio" name="color" value="black"/>
                                         <span className={`${styles.fakeRadio} ${styles.matSilver}`}></span>
                                     </label>
                                 </fieldset>
@@ -75,19 +82,19 @@ class Order extends React.Component {
                                 <fieldset className={styles.prodSize}>
                                     <legend className={styles.legend}>Размер:</legend>
                                     <label className={styles.size}>
-                                        <input className={styles.radio} type="radio" name="size" value="4.5см"/>
+                                        <input className={styles.radio} type="radio" name="size" value="4.5cm"/>
                                         <span className={styles.fakeRadio}>4.5см</span>
                                     </label>
                                     <label className={styles.size}>
-                                        <input className={styles.radio} type="radio" name="size" value="5.0см"/>
+                                        <input className={styles.radio} type="radio" name="size" value="5.0cm" defaultChecked/>
                                         <span className={styles.fakeRadio}>5.0см</span>
                                     </label>
                                     <label className={styles.size}>
-                                        <input className={styles.radio} type="radio" name="size" value="5.5см"/>
+                                        <input className={styles.radio} type="radio" name="size" value="5.5cm"/>
                                         <span className={styles.fakeRadio}>5.5см</span>
                                     </label>
                                     <label className={styles.size}>
-                                        <input className={styles.radio} type="radio" name="size" value="6.0см"/>
+                                        <input className={styles.radio} type="radio" name="size" value="6.0cm"/>
                                         <span className={styles.fakeRadio}>6.0см</span>
                                     </label>
                                     <label className={styles.size}>
@@ -119,8 +126,8 @@ class Order extends React.Component {
 
                     </div>
 
-                    {this.state.isModalOpen ? <OrderModal closeModal={this.closeModal}/> : ''}
-                    {this.state.isOrderComplete ? <ThanksModal closeModal={this.closeModal} /> : ''}
+                    {/* {this.state.isModalOpen ? <OrderModal closeModal={this.closeModal}/> : ''}
+                    {this.state.isOrderComplete ? <ThanksModal closeModal={this.closeModal} /> : ''} */}
 
                 </div>
             </section>
