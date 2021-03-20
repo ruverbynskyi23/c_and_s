@@ -22,7 +22,7 @@ class Footer extends React.Component {
                                     <Link className={styles.itemLink} to="/order">Ассортимент</Link>
                                 </li>
                                 <li className={styles.listItem}>
-                                    <Link className={styles.itemLink} to="/gallery">Галлерея</Link>
+                                    <Link className={styles.itemLink} to="/gallery">Галерея</Link>
                                 </li>
                                 <li className={styles.listItem}>
                                     <Link className={styles.itemLink} to="/faqs">Оплата и доставка</Link>
