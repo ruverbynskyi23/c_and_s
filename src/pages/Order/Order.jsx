@@ -49,7 +49,7 @@ class Order extends React.Component {
 
                         <div className={styles.productInfo}>
                             <h3 className={styles.name}>Ножницы парикмахерские со съемным упором</h3>
-                            <p className={styles.description}>Некоторые продавцы ножниц громко заявляют о том, что их ножницы, мол, точат себя сами. Якобы одно лезвие сделано из более твердого </p>
+                            <p className={styles.description}>Вы можете заказать любой размер в указанном диапазоне. Сталь 40х13 с твердостью 56 HR. Ножницы по своим характеристикам соответствуют моделям 2 класса.</p>
 
                             <form className={styles.orderForm} onSubmit={this.handleFormSubmit}>
                                 <fieldset>
