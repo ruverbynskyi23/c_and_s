@@ -7,26 +7,36 @@
 }
 
 .introduction {
-  padding-top: 312px;
+  padding: 270px 0 258px;
   background-image: url('../../assets//main-bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
+
+
   .title {
-    @include section-title(64px, 90px);
+    @include section-title(64px, 130%);
     max-width: 770px;
-    margin-bottom: 115px;
+    margin-bottom: 28px;
+  }
+
+  .subtitle {
+    @include section-text;
+    max-width: 786px;
+    letter-spacing: 0.015em;
+    margin-bottom: 113px;
   }
 
   .actionBlock {
-    padding: 0 0 288px 41px;
+    padding-left: 41px;
   }
 
   .sidebar {
     position: absolute;
+    top: 50%;
     right: 0;
-    bottom: 333px;
+    transform: translateY(-50%);
 
     .link {
       margin-bottom: 40px;
@@ -38,7 +48,7 @@
 }
 
 .advantages {
-  padding: 140px 0;
+  padding: 107px 0 100px;
   
   .sectionTitle {
     visibility: hidden;
@@ -51,19 +61,19 @@
   }
 
   .advantageItem {
-    margin-right: 142px;
+    margin-right: 108px;
     text-align: center;
 
     &:last-child {
       margin-right: 0;
     }
     .caption {
-      margin: 24px 0 8px;
-      @include section-text(24px, 36px);
-      letter-spacing: 0.025em;
+      margin: 31px 0 2px;
+      @include section-text(28px, 150%);
+      letter-spacing: 0.02em;
     }
     .description {
-      @include section-text(18px, 27px);
+      @include section-text(20px, 150%);
       letter-spacing: 0.015em;
       color: $grey;
     }
@@ -71,7 +81,7 @@
 }
 
 .history {
-  padding: 140px 0;
+  padding: 130px 0;
   background-color: $pale-blue;
 
   .container {
@@ -84,28 +94,28 @@
     margin-right: 139px;
 
     .scissorsImg {
-      box-shadow: 0px 72px 40px -42px $shadow;
+      box-shadow: 0px 72px 40px -42px $silver;
     }
   }
 
   .textWrapper {
-    max-width: 515px;
+    max-width: 556px;
 
     .sectionTitle {
       @include section-title;
-      margin-bottom: 34px;
+      margin-bottom: 30px;
     }
 
     .sectionText {
       @include section-text;
-      letter-spacing: 0.015;
-      margin-bottom: 64px;
+      letter-spacing: 0.015em;
+      margin-bottom: 54px;
     }  
   }
 }
 
 .feature {
-  padding: 140px 0;
+  padding: 130px 0;
 
   .container {
     padding: 0 139px;
@@ -113,26 +123,27 @@
 
   .textWrapper {
     max-width: 785px;
-    margin-bottom: 100px;
+    margin-bottom: 71px;
 
     .sectionTitle {
       @include section-title;
-      margin-bottom: 34px;
+      margin-bottom: 30px;
     }
     
     .sectionText {
       @include section-text;
-      margin-bottom: 64px;
+      margin-bottom: 57px;
+      letter-spacing: 0.015em;
     }  
   }
 
   .sectionImg {
-    margin: 38px 0;
+    margin: 50px 0;
   }
 }
 
 .inspiration {
-  padding: 140px 0;
+  padding: 130px 0;
 
   .container {
     padding: 0 139px;
@@ -146,7 +157,7 @@
   .sliderWrapper {
     position: relative;
     max-height: 775px;
-    margin-bottom: 64px;
+    margin-bottom: 56px;
 
     .spacer {
       padding: 79px 0;

@@ -5,6 +5,7 @@
   text-decoration: none;
   display: inline-block;
   @include btn-text($grey);
+  font-weight: 600;
   letter-spacing: 0.15em;
 
   position: relative;

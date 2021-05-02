@@ -1,5 +1,6 @@
 const generalPics = {
   'logo': require('./logo.svg').default,
+  'logoFooter': require('./logo_footer.svg').default,
   'scissors': require('./scissors.jpg').default,
   'scissors2': require('./scissors2.jpg').default
 };

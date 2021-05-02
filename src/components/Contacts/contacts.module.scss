@@ -7,6 +7,7 @@
 }
 
 .contacts {
+    margin-top: 130px;
     padding: 170px 0;
     background-image: url('../../assets/contacts_bg.jpg');
     background-repeat: no-repeat;
@@ -14,18 +15,18 @@
     background-size: cover;
 
     .sectionTitle {
-        @include section-title(64px, 90px);
+        @include section-title;
         font-weight: 600;
         color: $white;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
     }
     
     .sectionText {
         max-width: 574px;
-        @include section-text(28px, 36px);
-        letter-spacing: 0.04em;
+        @include section-text;
+        letter-spacing: 0.015em;
         color: $white;
-        margin-bottom: 46px;
+        margin-bottom: 34px;
     }
 
     .social {

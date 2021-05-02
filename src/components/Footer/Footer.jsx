@@ -10,7 +10,7 @@ class Footer extends React.Component {
                 <div className={styles.container}>
                     <section className={styles.content}>
                         <Link className={styles.logo} to="/">
-                            <img src={generalPics.logo} alt="логотип"/>
+                            <img src={generalPics.logoFooter} alt="логотип"/>
                         </Link>
 
                         <nav className={styles.navigation}>

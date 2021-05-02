@@ -6,20 +6,20 @@
   max-width: $maxWidth;
 }
 
-@mixin section-title($size: 52px, $lheight: 68px) {
+@mixin section-title($size: 52px, $lheight: 120%) {
   font-size: $size;
   font-weight: normal;
   line-height: $lheight;
   color: $black;
 }
 
-@mixin section-text($size: 20px, $lheight: 30px) {
+@mixin section-text($size: 20px, $lheight: 150%) {
   font-size: $size;
   line-height: $lheight;
   color: $dark-grey;
 }
 
-@mixin btn-text($color, $size: 20px, $lheight: 30px) {
+@mixin btn-text($color, $size: 20px, $lheight: 150%) {
   font-size: $size;
   line-height: $lheight;
   color: $color;

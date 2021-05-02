@@ -24,6 +24,7 @@ class Home extends React.Component {
         <section className={styles.introduction}>
           <div className={styles.container}>
             <h1 className={styles.title}>Парикмахерские ножницы ручной работы</h1>
+            <p className={styles.subtitle}>Порадуйте себя качественным инструментом украинского производителя. Наши ножницы пропитаны любовью.</p>
 
             <div className={styles.actionBlock}>
               <MainBtn

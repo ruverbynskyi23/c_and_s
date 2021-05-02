@@ -7,30 +7,30 @@
 }
 
 .footer {
-    padding: 140px 0 50px;
+    padding: 130px 0 32px;
     position: relative;
 
     &::before {
         content: "";
-        background-color: $shadow;
+        background-color: $silver;
         width: 100%;
         height: 1px;
         position: absolute;
         left: 0;
-        bottom: 100px;
+        bottom: 85px;
     }    
 
     .content {
         display: flex;
         align-items: center;
-        margin-bottom: 90px;
+        margin-bottom: 120px;
 
         .logo {
             margin-right: 138px;
         }
 
         .navigation {
-            margin-right: 220px;
+            margin-right: auto;
         }
 
         .navList {
@@ -41,12 +41,13 @@
             }
 
             .listItem:nth-child(1) {
-                margin-right: 112px;
+                margin-right: 184px;
             }
 
             .itemLink {
                 text-decoration: none;
-                @include btn-text($dark-grey, 18px, 27px);
+                @include btn-text($dark-grey, 18px, 150%);
+                font-weight: 400;
                 font-family: $Sarabun;
             }
         }
@@ -55,14 +56,12 @@
             display: flex;
 
             .time {
-                margin-right: 66px;
-                @include section-text(18px, 27px);
+                margin-right: 58px;
+                @include section-text(18px, 150%);
                 font-family: $Sarabun;
-                letter-spacing: -0.03em;
 
                 .text:nth-child(2) {
                     margin-top: 9px;
-                    letter-spacing: 0.05em;
                 }
             }
 
@@ -71,13 +70,13 @@
 
                 &::before {
                     content: "";
-                    width: 2px;
+                    width: 1px;
                     height: 100%;
-                    background-color: $shadow;
+                    background-color: $silver;
                     transform-origin: 0 0;
                     position: absolute;
                     top: 0;
-                    left: -28px;
+                    left: -29px;
                 }
             }
 
@@ -102,7 +101,8 @@
         display: flex;
         justify-content: space-between;
         padding-top: 32px;
-        @include section-text(16px, 24px);
+        @include section-text(14px, 150%);
+        letter-spacing: 0.015em;
         font-family: $Sarabun;
         color: $grey;
 
