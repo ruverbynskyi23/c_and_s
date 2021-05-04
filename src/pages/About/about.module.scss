@@ -6,93 +6,94 @@
 }
 
 .aboutUs {
-    padding: 216px 0 250px;
+  padding: 216px 0 130px;
+  overflow-x: hidden;
 
-    .sectionTitle {
-        @include section-title;
-        margin-bottom: 34px;
+  .sectionTitle {
+    @include section-title;
+    margin-bottom: 30px;
+  }
+
+  .sectionText {
+    @include section-text;
+    letter-spacing: 0.015em;
+  }
+
+  .ourStart {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+
+    .sectionImg {
+        margin: 0 138px 0 -150px;
+    }
+  }
+
+  .ourResearch {
+    display: flex;
+    align-items: center;
+    margin-bottom: 200px;
+
+    .sectionImg {
+        margin: 0 -150px 0 138px;
+    }
+  }
+
+  .manufacturing {
+    text-align: center;
+    margin-bottom: 200px;
+
+    .textContent {
+        margin: 0 auto 62px;
+        max-width: 1064px;
     }
 
-    .sectionText {
-        @include section-text;
-        letter-spacing: 0.015em;
-    }
+    .accordion {
+      .imgWrapper {
+        margin-bottom: 20px;
+        max-height: 275px;
 
-    .ourStart {
-        display: flex;
-        align-items: center;
-        margin-bottom: 50px;
+        opacity: 0.7;
+        overflow: hidden;
+        cursor: pointer;
 
-        .sectionImg {
-            margin: 0 138px 0 -150px;
+        transition:
+          opacity .8s ease,
+          max-height 1s ease .2s;
+
+        .wideImg {
+          width: 100%;
+          margin-top: -17%;
+          transition: margin-top 1s ease;
         }
-    }
 
-    .ourResearch {
-        display: flex;
-        align-items: center;
-        margin-bottom: 250px;
-
-        .sectionImg {
-            margin: 0 -150px 0 138px;
-        }
-    }
-
-    .manufacturing {
-        text-align: center;
-        margin-bottom: 250px;
-
-        .textContent {
-            margin: 0 auto 46px;
-            max-width: 1064px;
+        &:last-child {
+          margin-bottom: 0;
         }
 
-        .accordion {
-            .imgWrapper {
-              margin-bottom: 20px;
-              max-height: 223px;
-      
-              opacity: 0.7;
-              overflow: hidden;
-              cursor: pointer;
-      
-              transition:
-                opacity .8s ease,
-                max-height 1s ease .2s;
-      
-              .wideImg {
-                width: 100%;
-                margin-top: -17%;
-                transition: margin-top 1s ease;
-              }
-      
-              &:last-child {
-                margin-bottom: 0;
-              }
-      
-              &:hover {
-                opacity: 1;
-              }
-      
-              &.open {
-                opacity: 1;
-                max-height: 833px;
-                transition: max-height 1s ease;
-      
-                .wideImg {
-                  margin-top: 0;
-                }
-              }
-            }
-          }      
-    }
-
-    .ourResult {
-        display: flex;
-        align-items: center;
-
-        .sectionImg {
-            margin: 0 -150px 0 138px;
+        &:hover {
+          opacity: 1;
         }
+
+        &.open {
+          opacity: 1;
+          max-height: 833px;
+          transition: max-height 1s ease;
+
+          .wideImg {
+            margin-top: 0;
+          }
+        }
+      }
     }
+  }
+
+  .ourResult {
+    display: flex;
+    align-items: center;
+
+    .sectionImg {
+        margin: 0 -150px 0 138px;
+    }
+  }
 }
