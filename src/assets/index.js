@@ -38,7 +38,7 @@ for(let i = 1; i < 8; i++) {
 
 const gallery = {};
 
-for(let i = 1; i < 17; i++) {
+for(let i = 1; i < 19; i++) {
   gallery[`pic${i}`] = require(`./gallery/gallery${i}.jpg`).default;
 }
 

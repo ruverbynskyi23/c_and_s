@@ -14,12 +14,18 @@ class Gallery extends React.Component {
           )
         }
 
+        console.log(pics);
+
         return(
             <section className={styles.gallery}>
                 <div className={styles.container}>
 
                     <h2 className={styles.sectionTitle}>Место для вдохновения</h2>
                     
+                    <div className={`${styles.galleryBlock} ${styles.sixthBlock}`}>
+                        {pics.splice(-2, 2)}
+                    </div>
+
                     <div className={`${styles.galleryBlock} ${styles.fstBlock}`}>
                         {pics.splice(0, 4)}
                     </div>
