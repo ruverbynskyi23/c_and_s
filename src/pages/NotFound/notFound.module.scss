@@ -3,7 +3,7 @@
 
 .container {
   @include container;
-  padding: 376px 0 345px;
+  padding: 376px 0 353px;
   text-align: center;
 }
 
@@ -22,7 +22,7 @@
   .sectionText {
     @include section-text(52px, 68px);
     font-weight: 600;
-    margin-bottom: 155px;
+    margin-bottom: 113px;
     color: $black;
   }
 }
