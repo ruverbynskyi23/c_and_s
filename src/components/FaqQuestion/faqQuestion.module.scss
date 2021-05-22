@@ -4,6 +4,10 @@
 .listItem {
     margin-bottom: 46px;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     &::after {
         content: "";
         display: block;
