@@ -74,25 +74,25 @@ class Home extends React.Component {
 
             <div className={styles.wrapper}>
               <figure className={styles.advantageItem}>
-                <img src={advantages.handmade} alt="ручная работа"/>
+                <img className={styles.advantage} src={advantages.handmade} alt="ручная работа"/>
                 <figcaption className={styles.caption}>HANDMADE</figcaption>
                 <p className={styles.description}>Полностью ручная работа</p>
               </figure>
 
               <figure className={styles.advantageItem}>
-                <img src={advantages.quality} alt="качество"/>
+                <img className={styles.advantage} src={advantages.quality} alt="качество"/>
                 <figcaption className={styles.caption}>КАЧЕСТВО</figcaption>
                 <p className={styles.description}>Уделяем внимание деталям</p>
               </figure>
 
               <figure className={styles.advantageItem}>
-                <img src={advantages.sharpening} alt="заточка"/>
+                <img className={styles.advantage} src={advantages.sharpening} alt="заточка"/>
                 <figcaption className={styles.caption}>ЗАТОЧКА</figcaption>
                 <p className={styles.description}>Мастер точит вручную</p>
               </figure>
 
               <figure className={styles.advantageItem}>
-                <img src={advantages.uniqueness} alt="уникальность"/>
+                <img className={styles.advantage} src={advantages.uniqueness} alt="уникальность"/>
                 <figcaption className={styles.caption}>УНИКАЛЬНОСТЬ</figcaption>
                 <p className={styles.description}>Можем нанести гравировку</p>
               </figure>
@@ -109,7 +109,7 @@ class Home extends React.Component {
             </figure>
 
             <div className={styles.textWrapper}>
-              <h2 className={styles.sectionTitle}>История<br/>нашего бренда</h2>
+              <h2 className={styles.sectionTitle}>История нашего бренда</h2>
               <p className={styles.sectionText}>Мы долго взращивали идею создания украинского бренда парикмахерских ножниц. Без преувеличения работали днем и ночью, мечтая создать инструмент высокого качества, который понравится мастерам.</p>
 
               <SecondaryBtn text="Подробнее" path="/about"/>
@@ -142,13 +142,7 @@ class Home extends React.Component {
           <div className={styles.container}>
             <h2 className={styles.sectionTitle}>Фото для вдохновения</h2>
 
-            <div className={styles.sliderWrapper}>
-              <Slider />
-
-              <div className={styles.spacer}>
-                <span className={styles.spacerText}>scissors handmade</span>
-              </div>
-            </div>
+            <Slider />
 
             <div className={styles.btnWrapper}>
                 <SecondaryBtn text="Смотреть все" path="/gallery"/>

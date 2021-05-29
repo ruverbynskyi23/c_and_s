@@ -23,3 +23,39 @@
         background-color: $light-grey;
     }
 }
+
+@media (max-width: 1360px) {
+    .container {
+        @include container($l);
+        padding: 0 101px;
+    }
+
+    .faqs {
+        padding: 174px 0 180px;
+
+        .sectionTitle {
+            @include section-title(44px, 130%);
+            margin-bottom: 42px;
+        }
+
+        .questionList::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            margin-bottom: 40px;
+            background-color: $light-grey;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        @include container($l);
+        padding: 0;
+    }
+
+    .faqs {
+        padding: 184px 0 150px;
+    }
+}

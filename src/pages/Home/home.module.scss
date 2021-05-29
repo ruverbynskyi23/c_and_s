@@ -6,14 +6,15 @@
   position: relative;
 }
 
+/*
+  * Introduction section
+*/
 .introduction {
   padding: 270px 0 258px;
   background-image: url('../../assets//main-bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
-
 
   .title {
     @include section-title(64px, 130%);
@@ -47,6 +48,9 @@
   }
 }
 
+/*
+  * Advantages section
+*/
 .advantages {
   padding: 107px 0 100px;
   
@@ -67,6 +71,11 @@
     &:last-child {
       margin-right: 0;
     }
+
+    .advantage {
+      width: 90px;
+    }
+
     .caption {
       margin: 31px 0 2px;
       @include section-text(28px, 150%);
@@ -80,6 +89,9 @@
   }
 }
 
+/*
+  * History section
+*/
 .history {
   padding: 130px 0;
   background-color: $pale-blue;
@@ -102,6 +114,7 @@
     max-width: 556px;
 
     .sectionTitle {
+      width: 70%;
       @include section-title;
       margin-bottom: 30px;
     }
@@ -114,6 +127,9 @@
   }
 }
 
+/*
+  * Feature section
+*/
 .feature {
   padding: 130px 0;
 
@@ -142,11 +158,16 @@
   }
 }
 
+/*
+  * Inspiration section (slider)
+*/
 .inspiration {
   padding: 130px 0 260px;
 
   .container {
     padding: 0 139px;
+    display: flex;
+    flex-direction: column;
   }
 
   .sectionTitle {
@@ -154,35 +175,219 @@
     margin-bottom: 50px;
   }
 
-  .sliderWrapper {
-    position: relative;
-    max-height: 775px;
-    margin-bottom: 56px;
+  .btnWrapper {
+    text-align: right;
+    margin-right: 101px;
+  }
+}
 
-    .spacer {
-      padding: 79px 0;
-      width: 775px;
-      background-color: #fff;
-      text-align: center;
+/*
+  * Media query 1360
+*/
+@media (max-width: 1360px) {
+  .container {
+    @include container($l)
+  }
 
-      transform-origin: 0 0;
-      transform: rotate(-90deg) translateY(-50%);
+  .introduction {
+    padding: 266px 0 231px;
 
-      position: absolute;
-      top: 100%;
-      left: 50%;
+    .title {
+      @include section-title(52px, 140%);
+      max-width: 667px;
+    }
 
-      z-index: 2;
+    .subtitle {
+      margin-bottom: 73px;
+    }
+  }
 
-      .spacerText {
-        @include section-text(48px, 72px);
-        letter-spacing: 0.4em;
-        color: $light-grey;
+  .advantages {
+    padding: 100px 0 100px;
+
+    .advantageItem {
+      .advantage {
+        width: 70px;
+      }
+
+      .caption {
+        margin: 18px 0 8px;
+        @include section-text(20px, 150%);
+        letter-spacing: 0.025em;
+      }
+
+      .description {
+        @include section-text(16px, 150%);
       }
     }
   }
 
-  .btnWrapper {
-    text-align: right;
+  .history {
+    padding: 100px 0;
+
+    .sectionImg {
+      width: 404px;
+      margin-right: 101px;
+    }
+
+    .textWrapper {
+      max-width: 404px;
+  
+      .sectionTitle {
+        width: 80%;
+        @include section-title(44px, 130%);
+        margin-bottom: 24px;
+      }
+  
+      .sectionText {
+        @include section-text(18px);
+        margin-bottom: 57px;
+      }  
+    }
+  }
+
+  .feature {
+    padding: 100px 0;
+
+    .container {
+      padding: 0 101px;
+    }
+    
+    .textWrapper {
+      max-width: 571px;
+      margin-bottom: 90px;
+  
+      .sectionTitle {
+        @include section-title(44px, 130%);
+        margin-bottom: 24px;
+      }
+      
+      .sectionText {
+        @include section-text(18px, 150%);
+        margin-bottom: 57px;
+      }  
+    }
+
+    .sectionImg {
+      margin: 24px 0;
+      width: 996px;
+    }
+  }
+
+  .inspiration {
+    padding: 100px 0;
+
+    .container {
+      padding: 0 94px;
+    }
+
+    .sectionTitle {
+      @include section-title(44px, 130%);
+    }
+  }
+}
+
+/*
+  * Media query 768
+*/
+@media (max-width: 768px) {
+  .container {
+    @include container($m)
+  }
+
+  .introduction {
+    padding: 263px 0 177px;
+    background-position: center right 35%;
+
+    .sidebar {
+      display: none;
+    }
+  }
+
+  .advantages {
+
+    .wrapper {
+      flex-wrap: wrap;
+    }
+
+    .advantageItem {
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-basis: 50%;
+      margin-right: 0;
+
+      &:first-child {
+        margin-bottom: 60px;
+      }
+
+      .caption {
+        margin-bottom: 6px;
+      }
+
+      .description {
+        @include section-text(14px, 150%);
+      }
+    }
+  }
+
+  .history {
+    padding: 100px 0;
+
+    .container {
+      flex-direction: column-reverse;
+    }
+
+    .sectionImg {
+      width: 492px;
+      margin-right: 0;
+    }
+  
+
+    .textWrapper {
+      max-width: 557px;
+      margin-bottom: 80px;
+  
+      .sectionTitle {
+        width: 100%;
+        @include section-title(44px, 130%);
+        margin-bottom: 24px;
+      }
+  
+      .sectionText {
+        @include section-text(18px);
+        margin-bottom: 54px;
+      }  
+    }
+  }
+
+  .feature {
+    padding: 100px 0;
+
+    .container {
+      padding: 0;
+    }
+
+    .textWrapper {
+      padding: 0 50px;
+    }
+
+    .sectionImg {
+      margin: 20px 0;
+      width: 683px;
+    }
+  }
+
+  .inspiration {
+    padding: 100px 0;
+
+    .container {
+      padding: 0;
+    }
+
+    .sectionTitle {
+      @include section-title(44px, 130%);
+    }
   }
 }

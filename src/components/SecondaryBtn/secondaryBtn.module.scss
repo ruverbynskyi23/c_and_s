@@ -21,7 +21,7 @@
     border-radius: 50%;
     position: absolute;
     top: 0;
-    right: -54px;
+    right: -50px;
 
     transition: right .7s ease .2s;
   }
@@ -34,7 +34,7 @@
     background-color: $green;
     position: absolute;
     top: 16.5px;
-    right: -104px;
+    right: -100px;
 
     transition: right .7s ease;
   }
@@ -58,5 +58,19 @@
 
   &::after {
     background-color: $white;
+  }
+}
+
+@media (max-width: 1360px) {
+  .btn {
+    @include btn-text(null, 18px);
+
+    &::before {
+      right: -50px;
+    }
+
+    &::after {
+      right: -100px;
+    }
   }
 }

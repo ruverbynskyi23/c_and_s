@@ -25,7 +25,16 @@
     margin-bottom: 50px;
 
     .sectionImg {
-        margin: 0 138px 0 -150px;
+      margin: 0 138px 0 -150px;
+
+      .historyImage {
+        width: 100%;
+        max-width: 846px;
+      }
+    }
+
+    .textContent {
+      max-width: 50%;
     }
   }
 
@@ -35,7 +44,16 @@
     margin-bottom: 200px;
 
     .sectionImg {
-        margin: 0 -150px 0 138px;
+      margin: 0 -150px 0 138px;
+
+      .historyImage {
+        width: 100%;
+        max-width: 846px;
+      }
+    }
+
+    .textContent {
+      max-width: 50%;
     }
   }
 
@@ -94,6 +112,167 @@
 
     .sectionImg {
         margin: 0 -150px 0 138px;
+
+      .historyImage {
+        width: 100%;
+        max-width: 846px;
+      }
+    }
+
+    .textContent {
+      max-width: 50%;
+    }
+  }
+}
+
+@media (max-width: 1360px) {
+  .container {
+    @include container($l);
+  }
+
+  .aboutUs {
+    padding: 174px 0 180px;
+
+    .sectionTitle {
+      @include section-title(44px, 130%);
+      margin-bottom: 24px;
+    }
+
+    .sectionText {
+      @include section-text(18px);
+      letter-spacing: 0.015em;
+    }
+
+    .ourStart {
+      margin-bottom: 40px;
+
+      .sectionImg {
+        .historyImage {
+          max-width: 595px;
+        }
+      }
+    }
+
+    .ourResearch {
+      margin-bottom: 180px;
+
+      .sectionImg {
+        .historyImage {
+          width: 100%;
+          max-width: 595px;
+        }
+      }
+    }
+
+    .manufacturing {
+      margin-bottom: 180px;
+
+      .textContent {
+        margin: 0 auto 84px;
+        max-width: 776px;
+      }
+
+      .accordion {
+        .imgWrapper {
+          margin-bottom: 16px;
+          max-height: 223px;
+        }
+      }
+    }
+
+    .ourResult {
+      .sectionImg {
+        .historyImage {
+          width: 100%;
+          max-width: 595px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    @include container($m);
+  }
+
+  .aboutUs {
+    padding: 184px 0 150px;
+
+    .ourStart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 87px;
+      margin-bottom: 150px;
+
+      .sectionImg {
+        margin: 0 0 70px;
+
+        .historyImage {
+          max-width: 100%;
+        }
+      }
+
+      .textContent {
+        max-width: 100%;
+      }
+    }
+
+    .ourResearch {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 0 87px;
+      margin-bottom: 150px;
+
+      .sectionImg {
+        margin: 0 0 70px;
+
+        .historyImage {
+          max-width: 100%;
+        }
+      }
+
+      .textContent {
+        max-width: 100%;
+      }
+    }
+
+    .manufacturing {
+      margin-bottom: 150px;
+
+      .textContent {
+        margin: 0 auto 80px;
+        max-width: 668px;
+      }
+
+      .accordion {
+        .imgWrapper {
+          margin-bottom: 16px;
+          max-height: 156px;
+        }
+      }
+    }
+
+    .ourResult {
+      display: flex;
+      flex-direction: column;
+      padding: 0 87px;
+
+      .sectionImg {
+        margin: 0;
+
+        .historyImage {
+          width: 100%;
+          max-width: 595px;
+        }
+      }
+
+      .textContent {
+        max-width: 100%;
+        margin-bottom: 70px;
+      }
     }
   }
 }

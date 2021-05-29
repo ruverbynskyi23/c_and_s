@@ -1,0 +1,25 @@
+/*
+  *
+  * Temporary  solution for responsive swiper slide
+  *
+*/
+
+.swiper-container {
+  .swiper-wrapper {
+    .swiper-slide img{
+      height: 775px !important;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 1360px) {
+  .swiper-container {
+    .swiper-wrapper {
+      .swiper-slide img{
+        height: 646px !important;
+        object-fit: cover;
+      }
+    }
+  }
+}

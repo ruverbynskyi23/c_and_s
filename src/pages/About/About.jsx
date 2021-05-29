@@ -48,7 +48,7 @@ class About extends React.Component {
         
                 <section className={styles.ourStart}>
                     <figure className={styles.sectionImg}>
-                        <img src={aboutUs['pic1']} alt="шлифовка ножниц"/>
+                        <img className={styles.historyImage} src={aboutUs['pic1']} alt="шлифовка ножниц"/>
                     </figure>
 
                     <div className={styles.textContent}>
@@ -64,7 +64,7 @@ class About extends React.Component {
                     </div>
 
                     <figure className={styles.sectionImg}>
-                        <img src={aboutUs['pic2']} alt="сверление ножниц"/>
+                        <img className={styles.historyImage} src={aboutUs['pic2']} alt="сверление ножниц"/>
                     </figure>
                 </section>
         
@@ -85,7 +85,7 @@ class About extends React.Component {
                         <p className={styles.sectionText}>{`И вот наконец-то наша мечта осуществилась и мы очень рады возможности поделиться с вами тем, что у нас получилось. Ножницы ручной работы от украинского бренда C&S, 6 размеров инструмента в различных цветовых вариациях. Легкие, острые и проворные :) И уже очень скоро мы также выпустим линейку филлировочных ножниц, будем держать вас в курсе.`}</p>
                     </div>
                     <figure className={styles.sectionImg}>
-                        <img src={aboutUs['pic7']} alt="готовые ножницы"/>
+                        <img className={styles.historyImage} src={aboutUs['pic7']} alt="готовые ножницы"/>
                     </figure>
                 </section>
                 </div>

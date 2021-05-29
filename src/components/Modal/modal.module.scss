@@ -9,18 +9,20 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
 
   .modal {
     display: inline-block;
     padding-top: 106px;
     text-align: center;
     background-color: #fff;
+    box-shadow: 0px 10px 60px rgba(157, 160, 163, 0.37);
     position: relative;
     z-index: 1;
 
     .modalTitle {
-      @include section-title(36px, 48px);
-      margin-bottom: 52px;
+      @include section-title(36px, 130%);
+      margin-bottom: 42px;
     }
 
     .closeBtn {
@@ -52,7 +54,6 @@
       margin: 0 296px;
       @include section-title(36px, 47px);
       font-weight: 600;
-      color: $white;
       margin-bottom: 14px;
     }
   }

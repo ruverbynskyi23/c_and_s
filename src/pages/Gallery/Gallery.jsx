@@ -9,12 +9,10 @@ class Gallery extends React.Component {
         for(const key in gallery) {
           pics.push(
             <figure className={styles.picture} key={key}>
-              <img src={gallery[key]} alt={key}/>
+              <img className={styles.galleryImage} src={gallery[key]} alt={key}/>
             </figure>
           )
         }
-
-        console.log(pics);
 
         return(
             <section className={styles.gallery}>

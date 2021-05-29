@@ -48,10 +48,22 @@
 
     &::before {
       transform: none;
+    }    
+  }
+}
+
+@media (max-width: 1360px) {
+  .btn {
+    @include btn-text($grey, 18px, 150%);
+
+    &:before {
+      width: 82px;
+      height: 82px;
+      top: -27.5px;
     }
-    
+
     &:last-child {
-      margin-bottom: 139px;
+      margin-left: 34px;
     }
   }
 }

@@ -35,7 +35,7 @@
     }
 
     .phone {
-      @include btn-text(#fff);
+      @include btn-text();
       text-decoration: none;
       font-weight: 500;
       letter-spacing: 0.05em;
@@ -115,7 +115,7 @@
 
   &.dark {
     .phone {
-      color: $dark-grey;
+      @include btn-text($dark-grey);
     }
 
     .burgerMenu {
@@ -127,6 +127,93 @@
 
     .middleLine::before {
       background-color: $dark-grey;
+    }
+  }
+}
+
+@media (max-width: 1360px) {
+  .header {
+    padding-top: 26px;
+
+    .container {
+      @include container($l);
+    }
+
+    .logo {
+      width: 101px;
+    }
+
+    .listItem {
+      .phone {
+        @include btn-text(#fff, 18px, 150%);
+      }
+    }
+
+    .burgerMenu {
+      margin-left: 125px;
+
+      &:before,
+      &:after {
+        width: 32px;
+      }
+
+      .middleLine:before {
+        width: 25px;
+      }
+    }
+
+    &.dark {
+      .phone {
+        @include btn-text($dark-grey);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    .container {
+      @include container($m);
+    }
+
+    .contactList {
+      .phone {
+        @include btn-text($dark-grey, 18px);
+      }  
+    }
+
+    .burgerMenu {
+      margin-left: 85px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .header {
+    padding-top: 28px;
+
+    .container {
+      @include container($s);
+
+    }
+
+    .logo {
+      width: 72px;
+    }
+
+    .contactList {
+      display: none;
+    }
+
+    .burgerMenu {
+      &:before,
+      &:after {
+        width: 28px;
+      }
+
+      .middleLine:before {
+        width: 22px;
+      }
     }
   }
 }

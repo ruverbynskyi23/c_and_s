@@ -28,16 +28,28 @@ class Slider extends React.Component {
     for(const key in sliderImgs) {
       slides.push(
         <SwiperSlide key={key}>
-          <img src={sliderImgs[key]} alt={`слайд${key.substr(-1)}`} />
+          <img className={styles.sliderImage} src={sliderImgs[key]} alt={`slide-${key.substr(-1)}`} />
         </SwiperSlide>
       )
     }
 
     return (
-      <>
+      <div className={styles.sliderWrapper}>
         <Swiper
-          spaceBetween={230}
+          spaceBetween={0}
           slidesPerView={2}
+          autoHeight="true"
+          breakpoints={{
+            768: {
+              spaceBetween: 32
+            },
+            1360: {
+              spaceBetween: 170
+            },
+            1750: {
+              spaceBetween: 230
+            }
+          }}
           navigation={{
             prevEl: '.btn-prev',
             nextEl: '.btn-next'
@@ -58,7 +70,10 @@ class Slider extends React.Component {
           onMouseOver={this.changeSliderBtnState}
         >
         </button>
-      </>
+        
+        <span className={styles.spacerText}>scissors handmade</span>
+
+      </div>
     )
   }
 }

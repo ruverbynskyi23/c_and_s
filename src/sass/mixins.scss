@@ -2,8 +2,8 @@
 
 @mixin container($maxWidth: $xl) {
   margin: 0 auto;
-  width: 100%;
   max-width: $maxWidth;
+  width: 90%;
 }
 
 @mixin section-title($size: 52px, $lheight: 120%) {
@@ -19,8 +19,15 @@
   color: $dark-grey;
 }
 
-@mixin btn-text($color, $size: 20px, $lheight: 150%) {
+@mixin btn-text($color: #fff, $size: 20px, $lheight: 150%) {
   font-size: $size;
   line-height: $lheight;
   color: $color;
+}
+
+@mixin sliderSpacer($fz: 48px, $lheight: 150%) {
+  font-size: $fz;
+  line-height: $lheight;
+  letter-spacing: 0.4em;
+  color: $light-grey;
 }

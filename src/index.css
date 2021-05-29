@@ -17,9 +17,9 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video, button {
-  margin: 0;
-	padding: 0;
-  border: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -31,6 +31,12 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
   font-family: 'Playfair Display', serif;
+}
+
+img,
+image {
+  max-width: 100%;
+  height: auto;
 }
 
 ol, ul {

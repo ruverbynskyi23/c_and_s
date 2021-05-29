@@ -7,10 +7,10 @@ class RoundBtn extends React.Component {
   render() {
     return (
       <Link className={styles.roundBtn} to="/order">
-        <svg width="96" height="96">
-          <text className={styles.btnText} y="48" x="48" textAnchor="middle" alignmentBaseline="middle">{this.props.text}</text>
-          <image href={btnSymbols.arrow} className={styles.btnImage} y="40" x="28"/>
-          <circle className={styles.circle} cy="48" cx="48" r="46"/>
+        <svg className={styles.svgBlock}>
+          <text className={styles.btnText} textAnchor="middle" alignmentBaseline="middle">{this.props.text}</text>
+          <image href={btnSymbols.arrow} className={styles.btnImage}/>
+          <circle className={styles.circle}/>
         </svg>
       </Link>
     )

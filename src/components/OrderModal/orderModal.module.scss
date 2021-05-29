@@ -14,10 +14,10 @@
 }
 
 .legend {
-  padding-left: 14px;
-  @include section-text;
+  padding-left: 12px;
+  @include section-text(24px, 150%);
   letter-spacing: 0.025em;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   position: relative;
 
   &::before {
@@ -35,7 +35,7 @@
 }
 
 .userData {
-  margin-bottom: 46px;
+  margin-bottom: 48px;
   
   .personalInfo {
     &:nth-child(3) {
@@ -49,20 +49,18 @@
 
   .fieldName {
     display: block;
-    @include section-text(16px, 24px);
+    @include section-text(14px, 150%);
     color: $pale-green;
-    letter-spacing: 0.015em;
-    margin-bottom: 11px;
+    margin-bottom: 8px;
   }
 
   .field {
     padding: 9px 16px;
     width: 100%;
     border: solid 1px $light-grey;
-    @include section-text(16px, 24px);
+    @include section-text(16px, 150%);
     font-family: inherit;
-    letter-spacing: 0.015em;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
 
     &::placeholder {
       color: $dark-silver;
@@ -85,11 +83,12 @@
 }
 
 .paymentData {
-  margin-bottom: 46px;
+  margin-bottom: 48px;
 
   .paymentOption {
     display: flex;
     align-items: center;
+    margin-bottom: 14px;
 
     .radio {
       display: none;
@@ -166,12 +165,14 @@
 }
 
 .userAgreement {
-  margin-bottom: 95px;
+  margin-bottom: 96px;
+  
   .agreement {
     display: flex;
     align-items: center;
     @include section-text(16px, 24px);
     color: $dark-silver;
+    cursor: pointer;
     position: relative;
   }
 
@@ -187,7 +188,7 @@
     width: 28px;
     height: 28px;
     border: solid 1px $dark-silver;
-    margin-right: 12px;
+    margin-right: 10px;
     position: relative;
 
     &::before {
